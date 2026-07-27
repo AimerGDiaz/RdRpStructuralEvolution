@@ -14,7 +14,7 @@ Biology, Box 7080, 75007 Uppsala, Sweden.
 RNA-seq expression data for uninfected and infected Arabidopsis thaliana
 were obtained from NCBI Bioprojects: TuMV PRJNA788379
 \[[1](#ref-gyula2022ecotype)\], TuYV and CaMV PRJEB49403
-\[[2](#ref-chesnais2022comparative)\], TyMV PRJNA1103879
+\[[2](#ref-chesnais2022comparative)\], TYMV PRJNA1103879
 \[[3](#ref-clavel2024metabolic)\], TCV PRJNA336058
 \[[4](#ref-wu2016analyses)\], CMV PRJNA1124548
 \[[5](#ref-liu2025mutually)\] and ArLV1 PRJNA863409
@@ -24,6 +24,18 @@ gene-level quantification was addressed by mapping with HISAT2 v2.2.1
 featureCounts (Liao et al., 2014). Differential expression was computed
 separately within each using DESeq2 DEGs were calculated using Deseq2
 (Love et al., 2014).
+
+## Libraries re-mapped
+
+| Virus |   Project    | Libraries |  SeqType   | Tissue  |     Ecotype     |      Genotypes      |          dpi          |                                                    Paper                                                     |               Reference               |
+|:-----:|:------------:|:---------:|:----------:|:-------:|:---------------:|:-------------------:|:---------------------:|:------------------------------------------------------------------------------------------------------------:|:-------------------------------------:|
+| ArLV1 | PRJNA863409  |  7 (58)   | Paired-End | Leaves  |      Col-0      |         WT          | 4% vs 80% infestation | [10.1093/plphys/kiae581](https://academic.oup.com/plphys/advance-article/doi/10.1093/plphys/kiae581/7849673) |  \[[6](#ref-jiang2024deciphering)\]   |
+| TuYV  |  PRJEB49403  |     3     | Paired-End | Rosette |      Col-0      |     WT aphid Mp     |     14dold, 21dpi     |                                          10.1128/spectrum.00136-22                                           | \[[2](#ref-chesnais2022comparative)\] |
+| TYMV  | PRJNA1103879 |  8 (16)   | Single-End | Rosette |      Col-0      |     WT and atg2     |         12dpi         |                    [10.1101/2024.05.06.590709](https://doi.org/10.1101/2024.05.06.590709)                    |   \[[3](#ref-clavel2024metabolic)\]   |
+| CaMV  |  PRJEB49403  |     6     | Paired-End | Rosette |      Col-0      |     WT aphid Mp     |     14dold, 21dpi     |                                          10.1128/spectrum.00136-22                                           | \[[2](#ref-chesnais2022comparative)\] |
+|  TCV  | PRJNA1103879 |  8 (16)   | Single-End | Rosette |      Col-0      |     WT and atg2     |         12dpi         |                    [10.1101/2024.05.06.590709](https://doi.org/10.1101/2024.05.06.590709)                    |   \[[3](#ref-clavel2024metabolic)\]   |
+| TuMV  | PRJNA788379  |     8     | Paired-End | Rosette | Col-0 and Bar-0 |         Wt          |     28dold, 14dpi     |                                         10.1371/journal.pone.0275588                                         |    \[[1](#ref-gyula2022ecotype)\]     |
+|  CMV  | PRJNA1124548 |     6     | Paired-End | Rosette |      Col-0      | WT, CMV and CMV-Δ2b |         14dpi         |            [10.1038/s41467-025-65355-1](https://www.nature.com/articles/s41467-025-65355-1#Abs1)             |     \[[5](#ref-liu2025mutually)\]     |
 
 # Viral RdRps structural prediction and phylogenetics
 
