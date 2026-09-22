@@ -1,0 +1,88 @@
+{
+  "number_of_structures": 17,
+  "number_of_unique_pairs": 136,
+  "rmsd_angstrom": {
+    "minimum": 0.69,
+    "median": 4.16,
+    "maximum": 6.6
+  },
+  "tm_score_average_length_normalized": {
+    "minimum": 0.22899,
+    "median": 0.5487599999999999,
+    "maximum": 0.97129,
+    "pairs_at_least_0_5": 75,
+    "fraction_at_least_0_5": 0.5514705882352942
+  },
+  "top_ten_pairs_by_tm_score": [
+    {
+      "structure_1": "TMV",
+      "structure_2": "YoMV",
+      "tm_score": 0.97129,
+      "rmsd_angstrom": 0.69,
+      "aligned_length": 478
+    },
+    {
+      "structure_1": "RYMV",
+      "structure_2": "TRoV",
+      "tm_score": 0.95293,
+      "rmsd_angstrom": 1.32,
+      "aligned_length": 445
+    },
+    {
+      "structure_1": "TRV",
+      "structure_2": "YoMV",
+      "tm_score": 0.93695,
+      "rmsd_angstrom": 1.52,
+      "aligned_length": 475
+    },
+    {
+      "structure_1": "CMV",
+      "structure_2": "YoMV",
+      "tm_score": 0.92139,
+      "rmsd_angstrom": 2.2,
+      "aligned_length": 468
+    },
+    {
+      "structure_1": "TMV",
+      "structure_2": "TRV",
+      "tm_score": 0.9162,
+      "rmsd_angstrom": 1.78,
+      "aligned_length": 479
+    },
+    {
+      "structure_1": "CMV",
+      "structure_2": "TMV",
+      "tm_score": 0.90646,
+      "rmsd_angstrom": 2.24,
+      "aligned_length": 471
+    },
+    {
+      "structure_1": "CMV",
+      "structure_2": "TRV",
+      "tm_score": 0.88939,
+      "rmsd_angstrom": 2.36,
+      "aligned_length": 468
+    },
+    {
+      "structure_1": "PlAMV",
+      "structure_2": "TYMV",
+      "tm_score": 0.85263,
+      "rmsd_angstrom": 2.33,
+      "aligned_length": 472
+    },
+    {
+      "structure_1": "RYMV",
+      "structure_2": "TuMV",
+      "tm_score": 0.75292,
+      "rmsd_angstrom": 3.27,
+      "aligned_length": 419
+    },
+    {
+      "structure_1": "AhPV1",
+      "structure_2": "TuMV",
+      "tm_score": 0.73992,
+      "rmsd_angstrom": 3.17,
+      "aligned_length": 456
+    }
+  ]
+}

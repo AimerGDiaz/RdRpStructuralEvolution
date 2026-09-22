@@ -1,0 +1,11 @@
+{
+  "generated_utc": "2026-09-19T08:55:50.577958+00:00",
+  "usalign_version": "20260826",
+  "usalign_executable_sha256": "7d2e41022b6124d1b737642bb68775656f6dfa0c4a20ba68d5d1fe3b7a171dd3",
+  "command_template": "USalign structure_1.pdb structure_2.pdb -mol prot -a T -outfmt -1",
+  "tm_score_used_in_symmetric_matrix": "normalized by the average length of the two structures (-a T)",
+  "rmsd_definition": "US-align RMSD over the residues in the final structural alignment",
+  "upgma_rmsd_distance": "aligned-residue RMSD in Angstrom",
+  "upgma_tm_distance": "1 - average-length-normalized TM-score",
+  "upgma_linkage": "unweighted arithmetic mean of all inter-cluster pairwise distances"
+}

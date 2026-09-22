@@ -56,14 +56,47 @@ The sequence or chain selection applied to each structure in `RdRps/` is summari
 | `tymv_206k_1298.pdb` | TyMV 206K | N-terminal region removed to retain the C-terminal RdRp-containing region | A:1298--1844 | 547 | 82.12 | -- |
 | `YoMV_RdRP_q66220_1120_1597.pdb` | YoMV RdRp | C-terminal RdRp-containing region extracted from the replication protein | A:1120--1597 | 478 | 88.25 | -- |
 
-## TRov vs RYMV RdRp TM-align
+## Pairwise structural-alignment confidence and UPGMA clustering
 
-Graphical example of the structural alignment of RdRp between the close relative Sobemovirus TRoV (Blue) and RYMV (Orange) using [TM-Align algotihm](https://www.rcsb.org/alignment) from RCSB web tool: 
+To provide quantitative support for the structure-based groupings obtained with DALI and Foldtree, all 17 structures in `RdRps/` were compared in an all-versus-all analysis with US-align v20260826 [@zhang2022usalign]. US-align performs sequence-independent monomeric structural alignment by maximizing TM-score. For every one of the 136 unique pairs, the analysis reports the RMSD over residues retained in the final structural alignment, aligned length, sequence identity, coverage, and TM-scores normalized independently by the length of each structure. Because length-specific TM-scores are directional, the symmetric TM-score matrix below uses the score normalized by the average length of the two structures (`-a T`); both directional scores remain available in the tidy results file.
 
-| Entry | Chain | RMSD | TM-score | Identity | Aligned Residues | Sequence Length | Modeled Residues |
-|---|---|---:|---:|---:|---:|---:|---:|
-| rymv_rdrp_1_464.pdb | A | - | - | - | - | 464 | 464 |
-| trov_p2ab_428.pdb | A | 1.32 | 0.94 | 52% | 440 | 447 | 447 |
+TM-score ranges from 0 to 1, and values of at least approximately 0.5 generally indicate the same global protein fold. RMSD is sensitive to the number of aligned residues and was therefore interpreted jointly with TM-score and alignment coverage. These metrics provide an independent, quantitative check of the structural-similarity signal underlying the DALI/Foldtree topology; they are descriptive alignment measures rather than bootstrap or branch-support probabilities.
+
+| Summary statistic | Value |
+|:--|--:|
+| Structures | 17 |
+| Unique pairwise alignments | 136 |
+| RMSD, minimum / median / maximum | 0.69 / 4.16 / 6.60 Å |
+| Average-length-normalized TM-score, minimum / median / maximum | 0.229 / 0.549 / 0.971 |
+| Pairs with TM-score >= 0.5 | 75/136 (55.1%) |
+
+The closest structural pairs illustrate that the high-similarity signal is not restricted to a single example. TMV--YoMV had the highest average-length-normalized TM-score (0.971; RMSD 0.69 Å across 478 aligned residues), followed by RYMV--TRoV (0.953; 1.32 Å across 445 residues), TRV--YoMV (0.937; 1.52 Å across 475 residues), and CMV--YoMV (0.921; 2.20 Å across 468 residues).
+
+![All pairwise aligned-residue RMSD and average-length-normalized TM-score values.](Figures/pairwise_RMSD_TMscore_heatmaps.svg)
+
+The complete numerical results are available as a [tidy pairwise table](Results/pairwise_structure_validation/pairwise_alignments.csv), an [RMSD matrix](Results/pairwise_structure_validation/pairwise_rmsd_matrix.csv), and a [TM-score matrix](Results/pairwise_structure_validation/pairwise_tm_score_matrix.csv). The [run metadata](Results/pairwise_structure_validation/run_metadata.json) records the US-align version, executable checksum, command, and metric definitions.
+
+### UPGMA clustering of the pairwise metrics
+
+UPGMA average-linkage clustering [@sokal1958statistical] was performed independently with (i) aligned-residue RMSD as the distance and (ii) `1 -` average-length-normalized TM-score as the distance. The internal-node labels in the dendrograms are the arithmetic-mean linkage distances at which clusters were joined. Both analyses recover the particularly close TMV--YoMV and RYMV--TRoV pairs; additional differences between the dendrograms are expected because RMSD and TM-score weight alignment extent and length differently. UPGMA imposes an ultrametric hierarchy, so these dendrograms are a transparent descriptive clustering of the validation metrics and are not presented as replacements for the DALI/Foldtree evolutionary topology.
+
+![UPGMA clustering calculated independently from the RMSD and TM-distance matrices.](Figures/pairwise_UPGMA_dendrograms.svg)
+
+The exact linkage histories are provided in the [RMSD merge table](Results/pairwise_structure_validation/upgma_rmsd_merges.csv) and [TM-distance merge table](Results/pairwise_structure_validation/upgma_tm_distance_merges.csv). Machine-readable trees are provided in Newick format for [RMSD](Results/pairwise_structure_validation/upgma_rmsd.newick) and [TM distance](Results/pairwise_structure_validation/upgma_tm_distance.newick).
+
+The complete analysis, including all alignments, matrices, UPGMA trees, and figures, can be regenerated with the repository script after downloading the official [US-align executable](https://seq2fun.dcmb.med.umich.edu/US-align/):
+
+```bash
+python Code/pairwise_structure_validation.py --usalign /path/to/USalign
+```
+
+### Representative RYMV--TRoV alignment
+
+The existing structural visualization shows the close Sobemovirus pair TRoV (blue) and RYMV (orange). The values below were recalculated in the same all-pairwise US-align run.
+
+| Pair | Chains | RMSD (Å) | TM-score (average-length normalized) | Directional TM-scores (RYMV / TRoV length) | Identity | Aligned residues |
+|:--|:--:|--:|--:|--:|--:|--:|
+| RYMV--TRoV | A / A | 1.32 | 0.953 | 0.936 / 0.971 | 51.5% | 445 |
 
 ::: {style="text-align: center;"}
 <figure>
@@ -73,7 +106,7 @@ height: 100%"/>
 ```
 <figcaption style="margin-top: 10px;">
 
-<strong>structural alignment of RdRp between the close relative Sobemovirus TRoV (Blue) and RYMV (Orange)</strong>
+<strong>Structural alignment of RdRp between the closely related Sobemoviruses TRoV (blue) and RYMV (orange).</strong>
 </figcaption>
 </figure>
 <a name="RYMV_TRoV_RdRps.gif"></a>

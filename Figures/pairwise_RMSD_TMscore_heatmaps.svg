@@ -1,0 +1,1236 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1772" height="999" viewBox="0 0 1772 999">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif}.title{font-size:24px;font-weight:700}.axis{font-size:14px}.cell{font-size:11px;font-weight:600}</style>
+<text x="886.0" y="34" text-anchor="middle" class="title">All-pairwise RdRp structural validation (US-align)</text>
+<text x="469.0" y="73" text-anchor="middle" class="title">Aligned-residue RMSD (Å)</text>
+<text x="133.0" y="163" transform="rotate(-55 133.0 163)" text-anchor="start" class="axis">AhPV1</text>
+<text x="103" y="203.56" text-anchor="end" class="axis">AhPV1</text>
+<text x="175.0" y="163" transform="rotate(-55 175.0 163)" text-anchor="start" class="axis">ALV1</text>
+<text x="103" y="245.56" text-anchor="end" class="axis">ALV1</text>
+<text x="217.0" y="163" transform="rotate(-55 217.0 163)" text-anchor="start" class="axis">CaMV</text>
+<text x="103" y="287.56" text-anchor="end" class="axis">CaMV</text>
+<text x="259.0" y="163" transform="rotate(-55 259.0 163)" text-anchor="start" class="axis">CMV</text>
+<text x="103" y="329.56" text-anchor="end" class="axis">CMV</text>
+<text x="301.0" y="163" transform="rotate(-55 301.0 163)" text-anchor="start" class="axis">HIV-1 RT</text>
+<text x="103" y="371.56" text-anchor="end" class="axis">HIV-1 RT</text>
+<text x="343.0" y="163" transform="rotate(-55 343.0 163)" text-anchor="start" class="axis">R2 RT</text>
+<text x="103" y="413.56" text-anchor="end" class="axis">R2 RT</text>
+<text x="385.0" y="163" transform="rotate(-55 385.0 163)" text-anchor="start" class="axis">PlAMV</text>
+<text x="103" y="455.56" text-anchor="end" class="axis">PlAMV</text>
+<text x="427.0" y="163" transform="rotate(-55 427.0 163)" text-anchor="start" class="axis">PLrV</text>
+<text x="103" y="497.56" text-anchor="end" class="axis">PLrV</text>
+<text x="469.0" y="163" transform="rotate(-55 469.0 163)" text-anchor="start" class="axis">RYMV</text>
+<text x="103" y="539.56" text-anchor="end" class="axis">RYMV</text>
+<text x="511.0" y="163" transform="rotate(-55 511.0 163)" text-anchor="start" class="axis">TCV</text>
+<text x="103" y="581.56" text-anchor="end" class="axis">TCV</text>
+<text x="553.0" y="163" transform="rotate(-55 553.0 163)" text-anchor="start" class="axis">TMV</text>
+<text x="103" y="623.56" text-anchor="end" class="axis">TMV</text>
+<text x="595.0" y="163" transform="rotate(-55 595.0 163)" text-anchor="start" class="axis">TRoV</text>
+<text x="103" y="665.56" text-anchor="end" class="axis">TRoV</text>
+<text x="637.0" y="163" transform="rotate(-55 637.0 163)" text-anchor="start" class="axis">TRV</text>
+<text x="103" y="707.56" text-anchor="end" class="axis">TRV</text>
+<text x="679.0" y="163" transform="rotate(-55 679.0 163)" text-anchor="start" class="axis">TuMV</text>
+<text x="103" y="749.56" text-anchor="end" class="axis">TuMV</text>
+<text x="721.0" y="163" transform="rotate(-55 721.0 163)" text-anchor="start" class="axis">TuYV</text>
+<text x="103" y="791.56" text-anchor="end" class="axis">TuYV</text>
+<text x="763.0" y="163" transform="rotate(-55 763.0 163)" text-anchor="start" class="axis">TYMV</text>
+<text x="103" y="833.56" text-anchor="end" class="axis">TYMV</text>
+<text x="805.0" y="163" transform="rotate(-55 805.0 163)" text-anchor="start" class="axis">YoMV</text>
+<text x="103" y="875.56" text-anchor="end" class="axis">YoMV</text>
+<rect x="112" y="175" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="133.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="154" y="175" width="42" height="42" fill="#7991b3" stroke="white" stroke-width="1"/>
+<text x="175.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.4</text>
+<rect x="196" y="175" width="42" height="42" fill="#385a8a" stroke="white" stroke-width="1"/>
+<text x="217.0" y="201.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="238" y="175" width="42" height="42" fill="#6581a7" stroke="white" stroke-width="1"/>
+<text x="259.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="280" y="175" width="42" height="42" fill="#20457a" stroke="white" stroke-width="1"/>
+<text x="301.0" y="201.88" text-anchor="middle" fill="white" class="cell">5.9</text>
+<rect x="322" y="175" width="42" height="42" fill="#345687" stroke="white" stroke-width="1"/>
+<text x="343.0" y="201.88" text-anchor="middle" fill="white" class="cell">5.3</text>
+<rect x="364" y="175" width="42" height="42" fill="#52709b" stroke="white" stroke-width="1"/>
+<text x="385.0" y="201.88" text-anchor="middle" fill="white" class="cell">4.5</text>
+<rect x="406" y="175" width="42" height="42" fill="#7a92b4" stroke="white" stroke-width="1"/>
+<text x="427.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.3</text>
+<rect x="448" y="175" width="42" height="42" fill="#718aae" stroke="white" stroke-width="1"/>
+<text x="469.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.6</text>
+<rect x="490" y="175" width="42" height="42" fill="#6984aa" stroke="white" stroke-width="1"/>
+<text x="511.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.8</text>
+<rect x="532" y="175" width="42" height="42" fill="#6581a7" stroke="white" stroke-width="1"/>
+<text x="553.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="574" y="175" width="42" height="42" fill="#7891b3" stroke="white" stroke-width="1"/>
+<text x="595.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.4</text>
+<rect x="616" y="175" width="42" height="42" fill="#5d7aa2" stroke="white" stroke-width="1"/>
+<text x="637.0" y="201.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="658" y="175" width="42" height="42" fill="#8097b8" stroke="white" stroke-width="1"/>
+<text x="679.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.2</text>
+<rect x="700" y="175" width="42" height="42" fill="#7f97b8" stroke="white" stroke-width="1"/>
+<text x="721.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.2</text>
+<rect x="742" y="175" width="42" height="42" fill="#476794" stroke="white" stroke-width="1"/>
+<text x="763.0" y="201.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="784" y="175" width="42" height="42" fill="#6580a7" stroke="white" stroke-width="1"/>
+<text x="805.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="112" y="217" width="42" height="42" fill="#7991b3" stroke="white" stroke-width="1"/>
+<text x="133.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">3.4</text>
+<rect x="154" y="217" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="175.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="196" y="217" width="42" height="42" fill="#4a6996" stroke="white" stroke-width="1"/>
+<text x="217.0" y="243.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="238" y="217" width="42" height="42" fill="#6783a8" stroke="white" stroke-width="1"/>
+<text x="259.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="280" y="217" width="42" height="42" fill="#274b7f" stroke="white" stroke-width="1"/>
+<text x="301.0" y="243.88" text-anchor="middle" fill="white" class="cell">5.7</text>
+<rect x="322" y="217" width="42" height="42" fill="#3c5d8c" stroke="white" stroke-width="1"/>
+<text x="343.0" y="243.88" text-anchor="middle" fill="white" class="cell">5.1</text>
+<rect x="364" y="217" width="42" height="42" fill="#4e6d98" stroke="white" stroke-width="1"/>
+<text x="385.0" y="243.88" text-anchor="middle" fill="white" class="cell">4.6</text>
+<rect x="406" y="217" width="42" height="42" fill="#8198b9" stroke="white" stroke-width="1"/>
+<text x="427.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">3.1</text>
+<rect x="448" y="217" width="42" height="42" fill="#8ca2c0" stroke="white" stroke-width="1"/>
+<text x="469.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">2.8</text>
+<rect x="490" y="217" width="42" height="42" fill="#748db1" stroke="white" stroke-width="1"/>
+<text x="511.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">3.5</text>
+<rect x="532" y="217" width="42" height="42" fill="#5b77a0" stroke="white" stroke-width="1"/>
+<text x="553.0" y="243.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="574" y="217" width="42" height="42" fill="#8ba2c0" stroke="white" stroke-width="1"/>
+<text x="595.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">2.8</text>
+<rect x="616" y="217" width="42" height="42" fill="#5a779f" stroke="white" stroke-width="1"/>
+<text x="637.0" y="243.88" text-anchor="middle" fill="white" class="cell">4.3</text>
+<rect x="658" y="217" width="42" height="42" fill="#8ba1bf" stroke="white" stroke-width="1"/>
+<text x="679.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">2.8</text>
+<rect x="700" y="217" width="42" height="42" fill="#7b94b5" stroke="white" stroke-width="1"/>
+<text x="721.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">3.3</text>
+<rect x="742" y="217" width="42" height="42" fill="#4a6995" stroke="white" stroke-width="1"/>
+<text x="763.0" y="243.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="784" y="217" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="805.0" y="243.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="112" y="259" width="42" height="42" fill="#385a8a" stroke="white" stroke-width="1"/>
+<text x="133.0" y="285.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="154" y="259" width="42" height="42" fill="#4a6996" stroke="white" stroke-width="1"/>
+<text x="175.0" y="285.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="196" y="259" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="217.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="238" y="259" width="42" height="42" fill="#506f9a" stroke="white" stroke-width="1"/>
+<text x="259.0" y="285.88" text-anchor="middle" fill="white" class="cell">4.5</text>
+<rect x="280" y="259" width="42" height="42" fill="#3f5f8e" stroke="white" stroke-width="1"/>
+<text x="301.0" y="285.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="322" y="259" width="42" height="42" fill="#355788" stroke="white" stroke-width="1"/>
+<text x="343.0" y="285.88" text-anchor="middle" fill="white" class="cell">5.3</text>
+<rect x="364" y="259" width="42" height="42" fill="#3f608e" stroke="white" stroke-width="1"/>
+<text x="385.0" y="285.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="406" y="259" width="42" height="42" fill="#476794" stroke="white" stroke-width="1"/>
+<text x="427.0" y="285.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="448" y="259" width="42" height="42" fill="#40618f" stroke="white" stroke-width="1"/>
+<text x="469.0" y="285.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="490" y="259" width="42" height="42" fill="#426290" stroke="white" stroke-width="1"/>
+<text x="511.0" y="285.88" text-anchor="middle" fill="white" class="cell">4.9</text>
+<rect x="532" y="259" width="42" height="42" fill="#516f9a" stroke="white" stroke-width="1"/>
+<text x="553.0" y="285.88" text-anchor="middle" fill="white" class="cell">4.5</text>
+<rect x="574" y="259" width="42" height="42" fill="#456492" stroke="white" stroke-width="1"/>
+<text x="595.0" y="285.88" text-anchor="middle" fill="white" class="cell">4.9</text>
+<rect x="616" y="259" width="42" height="42" fill="#385a8a" stroke="white" stroke-width="1"/>
+<text x="637.0" y="285.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="658" y="259" width="42" height="42" fill="#2f5184" stroke="white" stroke-width="1"/>
+<text x="679.0" y="285.88" text-anchor="middle" fill="white" class="cell">5.5</text>
+<rect x="700" y="259" width="42" height="42" fill="#4a6995" stroke="white" stroke-width="1"/>
+<text x="721.0" y="285.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="742" y="259" width="42" height="42" fill="#3d5e8d" stroke="white" stroke-width="1"/>
+<text x="763.0" y="285.88" text-anchor="middle" fill="white" class="cell">5.1</text>
+<rect x="784" y="259" width="42" height="42" fill="#53719b" stroke="white" stroke-width="1"/>
+<text x="805.0" y="285.88" text-anchor="middle" fill="white" class="cell">4.5</text>
+<rect x="112" y="301" width="42" height="42" fill="#6581a7" stroke="white" stroke-width="1"/>
+<text x="133.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="154" y="301" width="42" height="42" fill="#6783a8" stroke="white" stroke-width="1"/>
+<text x="175.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="196" y="301" width="42" height="42" fill="#506f9a" stroke="white" stroke-width="1"/>
+<text x="217.0" y="327.88" text-anchor="middle" fill="white" class="cell">4.5</text>
+<rect x="238" y="301" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="259.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="280" y="301" width="42" height="42" fill="#08306b" stroke="white" stroke-width="1"/>
+<text x="301.0" y="327.88" text-anchor="middle" fill="white" class="cell">6.6</text>
+<rect x="322" y="301" width="42" height="42" fill="#3d5e8d" stroke="white" stroke-width="1"/>
+<text x="343.0" y="327.88" text-anchor="middle" fill="white" class="cell">5.1</text>
+<rect x="364" y="301" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="385.0" y="327.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="406" y="301" width="42" height="42" fill="#647fa6" stroke="white" stroke-width="1"/>
+<text x="427.0" y="327.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="448" y="301" width="42" height="42" fill="#5b77a0" stroke="white" stroke-width="1"/>
+<text x="469.0" y="327.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="490" y="301" width="42" height="42" fill="#6e89ad" stroke="white" stroke-width="1"/>
+<text x="511.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">3.7</text>
+<rect x="532" y="301" width="42" height="42" fill="#a0b3cd" stroke="white" stroke-width="1"/>
+<text x="553.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">2.2</text>
+<rect x="574" y="301" width="42" height="42" fill="#5b78a0" stroke="white" stroke-width="1"/>
+<text x="595.0" y="327.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="616" y="301" width="42" height="42" fill="#9cb0ca" stroke="white" stroke-width="1"/>
+<text x="637.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">2.4</text>
+<rect x="658" y="301" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="679.0" y="327.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="700" y="301" width="42" height="42" fill="#627ea5" stroke="white" stroke-width="1"/>
+<text x="721.0" y="327.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="742" y="301" width="42" height="42" fill="#6681a8" stroke="white" stroke-width="1"/>
+<text x="763.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="784" y="301" width="42" height="42" fill="#a1b5ce" stroke="white" stroke-width="1"/>
+<text x="805.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">2.2</text>
+<rect x="112" y="343" width="42" height="42" fill="#20457a" stroke="white" stroke-width="1"/>
+<text x="133.0" y="369.88" text-anchor="middle" fill="white" class="cell">5.9</text>
+<rect x="154" y="343" width="42" height="42" fill="#274b7f" stroke="white" stroke-width="1"/>
+<text x="175.0" y="369.88" text-anchor="middle" fill="white" class="cell">5.7</text>
+<rect x="196" y="343" width="42" height="42" fill="#3f5f8e" stroke="white" stroke-width="1"/>
+<text x="217.0" y="369.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="238" y="343" width="42" height="42" fill="#08306b" stroke="white" stroke-width="1"/>
+<text x="259.0" y="369.88" text-anchor="middle" fill="white" class="cell">6.6</text>
+<rect x="280" y="343" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="301.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="322" y="343" width="42" height="42" fill="#20457a" stroke="white" stroke-width="1"/>
+<text x="343.0" y="369.88" text-anchor="middle" fill="white" class="cell">5.9</text>
+<rect x="364" y="343" width="42" height="42" fill="#143a73" stroke="white" stroke-width="1"/>
+<text x="385.0" y="369.88" text-anchor="middle" fill="white" class="cell">6.3</text>
+<rect x="406" y="343" width="42" height="42" fill="#1e4379" stroke="white" stroke-width="1"/>
+<text x="427.0" y="369.88" text-anchor="middle" fill="white" class="cell">6.0</text>
+<rect x="448" y="343" width="42" height="42" fill="#25497e" stroke="white" stroke-width="1"/>
+<text x="469.0" y="369.88" text-anchor="middle" fill="white" class="cell">5.8</text>
+<rect x="490" y="343" width="42" height="42" fill="#193e76" stroke="white" stroke-width="1"/>
+<text x="511.0" y="369.88" text-anchor="middle" fill="white" class="cell">6.1</text>
+<rect x="532" y="343" width="42" height="42" fill="#173d74" stroke="white" stroke-width="1"/>
+<text x="553.0" y="369.88" text-anchor="middle" fill="white" class="cell">6.2</text>
+<rect x="574" y="343" width="42" height="42" fill="#2d5083" stroke="white" stroke-width="1"/>
+<text x="595.0" y="369.88" text-anchor="middle" fill="white" class="cell">5.5</text>
+<rect x="616" y="343" width="42" height="42" fill="#1c4178" stroke="white" stroke-width="1"/>
+<text x="637.0" y="369.88" text-anchor="middle" fill="white" class="cell">6.0</text>
+<rect x="658" y="343" width="42" height="42" fill="#284c80" stroke="white" stroke-width="1"/>
+<text x="679.0" y="369.88" text-anchor="middle" fill="white" class="cell">5.7</text>
+<rect x="700" y="343" width="42" height="42" fill="#25497e" stroke="white" stroke-width="1"/>
+<text x="721.0" y="369.88" text-anchor="middle" fill="white" class="cell">5.8</text>
+<rect x="742" y="343" width="42" height="42" fill="#1c4178" stroke="white" stroke-width="1"/>
+<text x="763.0" y="369.88" text-anchor="middle" fill="white" class="cell">6.0</text>
+<rect x="784" y="343" width="42" height="42" fill="#143a72" stroke="white" stroke-width="1"/>
+<text x="805.0" y="369.88" text-anchor="middle" fill="white" class="cell">6.3</text>
+<rect x="112" y="385" width="42" height="42" fill="#345687" stroke="white" stroke-width="1"/>
+<text x="133.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.3</text>
+<rect x="154" y="385" width="42" height="42" fill="#3c5d8c" stroke="white" stroke-width="1"/>
+<text x="175.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.1</text>
+<rect x="196" y="385" width="42" height="42" fill="#355788" stroke="white" stroke-width="1"/>
+<text x="217.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.3</text>
+<rect x="238" y="385" width="42" height="42" fill="#3d5e8d" stroke="white" stroke-width="1"/>
+<text x="259.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.1</text>
+<rect x="280" y="385" width="42" height="42" fill="#20457a" stroke="white" stroke-width="1"/>
+<text x="301.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.9</text>
+<rect x="322" y="385" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="343.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="364" y="385" width="42" height="42" fill="#3e5f8e" stroke="white" stroke-width="1"/>
+<text x="385.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="406" y="385" width="42" height="42" fill="#3b5c8c" stroke="white" stroke-width="1"/>
+<text x="427.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.1</text>
+<rect x="448" y="385" width="42" height="42" fill="#3a5b8b" stroke="white" stroke-width="1"/>
+<text x="469.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="490" y="385" width="42" height="42" fill="#335587" stroke="white" stroke-width="1"/>
+<text x="511.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.4</text>
+<rect x="532" y="385" width="42" height="42" fill="#416290" stroke="white" stroke-width="1"/>
+<text x="553.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="574" y="385" width="42" height="42" fill="#3a5b8b" stroke="white" stroke-width="1"/>
+<text x="595.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="616" y="385" width="42" height="42" fill="#3a5b8b" stroke="white" stroke-width="1"/>
+<text x="637.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="658" y="385" width="42" height="42" fill="#486794" stroke="white" stroke-width="1"/>
+<text x="679.0" y="411.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="700" y="385" width="42" height="42" fill="#375989" stroke="white" stroke-width="1"/>
+<text x="721.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="742" y="385" width="42" height="42" fill="#2d5083" stroke="white" stroke-width="1"/>
+<text x="763.0" y="411.88" text-anchor="middle" fill="white" class="cell">5.5</text>
+<rect x="784" y="385" width="42" height="42" fill="#426290" stroke="white" stroke-width="1"/>
+<text x="805.0" y="411.88" text-anchor="middle" fill="white" class="cell">4.9</text>
+<rect x="112" y="427" width="42" height="42" fill="#52709b" stroke="white" stroke-width="1"/>
+<text x="133.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.5</text>
+<rect x="154" y="427" width="42" height="42" fill="#4e6d98" stroke="white" stroke-width="1"/>
+<text x="175.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.6</text>
+<rect x="196" y="427" width="42" height="42" fill="#3f608e" stroke="white" stroke-width="1"/>
+<text x="217.0" y="453.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="238" y="427" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="259.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="280" y="427" width="42" height="42" fill="#143a73" stroke="white" stroke-width="1"/>
+<text x="301.0" y="453.88" text-anchor="middle" fill="white" class="cell">6.3</text>
+<rect x="322" y="427" width="42" height="42" fill="#3e5f8e" stroke="white" stroke-width="1"/>
+<text x="343.0" y="453.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="364" y="427" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="385.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="406" y="427" width="42" height="42" fill="#476693" stroke="white" stroke-width="1"/>
+<text x="427.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="448" y="427" width="42" height="42" fill="#56749d" stroke="white" stroke-width="1"/>
+<text x="469.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.4</text>
+<rect x="490" y="427" width="42" height="42" fill="#4f6e99" stroke="white" stroke-width="1"/>
+<text x="511.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.6</text>
+<rect x="532" y="427" width="42" height="42" fill="#627da5" stroke="white" stroke-width="1"/>
+<text x="553.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="574" y="427" width="42" height="42" fill="#4d6c98" stroke="white" stroke-width="1"/>
+<text x="595.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.6</text>
+<rect x="616" y="427" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="637.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="658" y="427" width="42" height="42" fill="#57749e" stroke="white" stroke-width="1"/>
+<text x="679.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.3</text>
+<rect x="700" y="427" width="42" height="42" fill="#426290" stroke="white" stroke-width="1"/>
+<text x="721.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.9</text>
+<rect x="742" y="427" width="42" height="42" fill="#9db1cb" stroke="white" stroke-width="1"/>
+<text x="763.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">2.3</text>
+<rect x="784" y="427" width="42" height="42" fill="#627ea5" stroke="white" stroke-width="1"/>
+<text x="805.0" y="453.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="112" y="469" width="42" height="42" fill="#7a92b4" stroke="white" stroke-width="1"/>
+<text x="133.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">3.3</text>
+<rect x="154" y="469" width="42" height="42" fill="#8198b9" stroke="white" stroke-width="1"/>
+<text x="175.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">3.1</text>
+<rect x="196" y="469" width="42" height="42" fill="#476794" stroke="white" stroke-width="1"/>
+<text x="217.0" y="495.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="238" y="469" width="42" height="42" fill="#647fa6" stroke="white" stroke-width="1"/>
+<text x="259.0" y="495.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="280" y="469" width="42" height="42" fill="#1e4379" stroke="white" stroke-width="1"/>
+<text x="301.0" y="495.88" text-anchor="middle" fill="white" class="cell">6.0</text>
+<rect x="322" y="469" width="42" height="42" fill="#3b5c8c" stroke="white" stroke-width="1"/>
+<text x="343.0" y="495.88" text-anchor="middle" fill="white" class="cell">5.1</text>
+<rect x="364" y="469" width="42" height="42" fill="#476693" stroke="white" stroke-width="1"/>
+<text x="385.0" y="495.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="406" y="469" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="427.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="448" y="469" width="42" height="42" fill="#a4b7cf" stroke="white" stroke-width="1"/>
+<text x="469.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">2.1</text>
+<rect x="490" y="469" width="42" height="42" fill="#6480a6" stroke="white" stroke-width="1"/>
+<text x="511.0" y="495.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="532" y="469" width="42" height="42" fill="#637ea5" stroke="white" stroke-width="1"/>
+<text x="553.0" y="495.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="574" y="469" width="42" height="42" fill="#a2b5ce" stroke="white" stroke-width="1"/>
+<text x="595.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">2.2</text>
+<rect x="616" y="469" width="42" height="42" fill="#6c87ac" stroke="white" stroke-width="1"/>
+<text x="637.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">3.7</text>
+<rect x="658" y="469" width="42" height="42" fill="#8aa0bf" stroke="white" stroke-width="1"/>
+<text x="679.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">2.9</text>
+<rect x="700" y="469" width="42" height="42" fill="#6783a8" stroke="white" stroke-width="1"/>
+<text x="721.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="742" y="469" width="42" height="42" fill="#4a6995" stroke="white" stroke-width="1"/>
+<text x="763.0" y="495.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="784" y="469" width="42" height="42" fill="#6580a7" stroke="white" stroke-width="1"/>
+<text x="805.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="112" y="511" width="42" height="42" fill="#718aae" stroke="white" stroke-width="1"/>
+<text x="133.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">3.6</text>
+<rect x="154" y="511" width="42" height="42" fill="#8ca2c0" stroke="white" stroke-width="1"/>
+<text x="175.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">2.8</text>
+<rect x="196" y="511" width="42" height="42" fill="#40618f" stroke="white" stroke-width="1"/>
+<text x="217.0" y="537.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="238" y="511" width="42" height="42" fill="#5b77a0" stroke="white" stroke-width="1"/>
+<text x="259.0" y="537.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="280" y="511" width="42" height="42" fill="#25497e" stroke="white" stroke-width="1"/>
+<text x="301.0" y="537.88" text-anchor="middle" fill="white" class="cell">5.8</text>
+<rect x="322" y="511" width="42" height="42" fill="#3a5b8b" stroke="white" stroke-width="1"/>
+<text x="343.0" y="537.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="364" y="511" width="42" height="42" fill="#56749d" stroke="white" stroke-width="1"/>
+<text x="385.0" y="537.88" text-anchor="middle" fill="white" class="cell">4.4</text>
+<rect x="406" y="511" width="42" height="42" fill="#a4b7cf" stroke="white" stroke-width="1"/>
+<text x="427.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">2.1</text>
+<rect x="448" y="511" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="469.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="490" y="511" width="42" height="42" fill="#6782a8" stroke="white" stroke-width="1"/>
+<text x="511.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="532" y="511" width="42" height="42" fill="#5d7aa2" stroke="white" stroke-width="1"/>
+<text x="553.0" y="537.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="574" y="511" width="42" height="42" fill="#c0cfe1" stroke="white" stroke-width="1"/>
+<text x="595.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">1.3</text>
+<rect x="616" y="511" width="42" height="42" fill="#5b78a0" stroke="white" stroke-width="1"/>
+<text x="637.0" y="537.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="658" y="511" width="42" height="42" fill="#7c94b6" stroke="white" stroke-width="1"/>
+<text x="679.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">3.3</text>
+<rect x="700" y="511" width="42" height="42" fill="#a3b6cf" stroke="white" stroke-width="1"/>
+<text x="721.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">2.1</text>
+<rect x="742" y="511" width="42" height="42" fill="#4c6b97" stroke="white" stroke-width="1"/>
+<text x="763.0" y="537.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="784" y="511" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="805.0" y="537.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="112" y="553" width="42" height="42" fill="#6984aa" stroke="white" stroke-width="1"/>
+<text x="133.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.8</text>
+<rect x="154" y="553" width="42" height="42" fill="#748db1" stroke="white" stroke-width="1"/>
+<text x="175.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.5</text>
+<rect x="196" y="553" width="42" height="42" fill="#426290" stroke="white" stroke-width="1"/>
+<text x="217.0" y="579.88" text-anchor="middle" fill="white" class="cell">4.9</text>
+<rect x="238" y="553" width="42" height="42" fill="#6e89ad" stroke="white" stroke-width="1"/>
+<text x="259.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.7</text>
+<rect x="280" y="553" width="42" height="42" fill="#193e76" stroke="white" stroke-width="1"/>
+<text x="301.0" y="579.88" text-anchor="middle" fill="white" class="cell">6.1</text>
+<rect x="322" y="553" width="42" height="42" fill="#335587" stroke="white" stroke-width="1"/>
+<text x="343.0" y="579.88" text-anchor="middle" fill="white" class="cell">5.4</text>
+<rect x="364" y="553" width="42" height="42" fill="#4f6e99" stroke="white" stroke-width="1"/>
+<text x="385.0" y="579.88" text-anchor="middle" fill="white" class="cell">4.6</text>
+<rect x="406" y="553" width="42" height="42" fill="#6480a6" stroke="white" stroke-width="1"/>
+<text x="427.0" y="579.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="448" y="553" width="42" height="42" fill="#6782a8" stroke="white" stroke-width="1"/>
+<text x="469.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="490" y="553" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="511.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="532" y="553" width="42" height="42" fill="#6f8aae" stroke="white" stroke-width="1"/>
+<text x="553.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.6</text>
+<rect x="574" y="553" width="42" height="42" fill="#6e88ac" stroke="white" stroke-width="1"/>
+<text x="595.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.7</text>
+<rect x="616" y="553" width="42" height="42" fill="#738cb0" stroke="white" stroke-width="1"/>
+<text x="637.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.5</text>
+<rect x="658" y="553" width="42" height="42" fill="#6a84aa" stroke="white" stroke-width="1"/>
+<text x="679.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.8</text>
+<rect x="700" y="553" width="42" height="42" fill="#6782a8" stroke="white" stroke-width="1"/>
+<text x="721.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="742" y="553" width="42" height="42" fill="#4c6b97" stroke="white" stroke-width="1"/>
+<text x="763.0" y="579.88" text-anchor="middle" fill="white" class="cell">4.6</text>
+<rect x="784" y="553" width="42" height="42" fill="#708aae" stroke="white" stroke-width="1"/>
+<text x="805.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">3.6</text>
+<rect x="112" y="595" width="42" height="42" fill="#6581a7" stroke="white" stroke-width="1"/>
+<text x="133.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="154" y="595" width="42" height="42" fill="#5b77a0" stroke="white" stroke-width="1"/>
+<text x="175.0" y="621.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="196" y="595" width="42" height="42" fill="#516f9a" stroke="white" stroke-width="1"/>
+<text x="217.0" y="621.88" text-anchor="middle" fill="white" class="cell">4.5</text>
+<rect x="238" y="595" width="42" height="42" fill="#a0b3cd" stroke="white" stroke-width="1"/>
+<text x="259.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">2.2</text>
+<rect x="280" y="595" width="42" height="42" fill="#173d74" stroke="white" stroke-width="1"/>
+<text x="301.0" y="621.88" text-anchor="middle" fill="white" class="cell">6.2</text>
+<rect x="322" y="595" width="42" height="42" fill="#416290" stroke="white" stroke-width="1"/>
+<text x="343.0" y="621.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="364" y="595" width="42" height="42" fill="#627da5" stroke="white" stroke-width="1"/>
+<text x="385.0" y="621.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="406" y="595" width="42" height="42" fill="#637ea5" stroke="white" stroke-width="1"/>
+<text x="427.0" y="621.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="448" y="595" width="42" height="42" fill="#5d7aa2" stroke="white" stroke-width="1"/>
+<text x="469.0" y="621.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="490" y="595" width="42" height="42" fill="#6f8aae" stroke="white" stroke-width="1"/>
+<text x="511.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">3.6</text>
+<rect x="532" y="595" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="553.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="574" y="595" width="42" height="42" fill="#6682a8" stroke="white" stroke-width="1"/>
+<text x="595.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="616" y="595" width="42" height="42" fill="#b0c1d7" stroke="white" stroke-width="1"/>
+<text x="637.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">1.8</text>
+<rect x="658" y="595" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="679.0" y="621.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="700" y="595" width="42" height="42" fill="#607ca4" stroke="white" stroke-width="1"/>
+<text x="721.0" y="621.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="742" y="595" width="42" height="42" fill="#607ca4" stroke="white" stroke-width="1"/>
+<text x="763.0" y="621.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="784" y="595" width="42" height="42" fill="#d6e2f0" stroke="white" stroke-width="1"/>
+<text x="805.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.7</text>
+<rect x="112" y="637" width="42" height="42" fill="#7891b3" stroke="white" stroke-width="1"/>
+<text x="133.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">3.4</text>
+<rect x="154" y="637" width="42" height="42" fill="#8ba2c0" stroke="white" stroke-width="1"/>
+<text x="175.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">2.8</text>
+<rect x="196" y="637" width="42" height="42" fill="#456492" stroke="white" stroke-width="1"/>
+<text x="217.0" y="663.88" text-anchor="middle" fill="white" class="cell">4.9</text>
+<rect x="238" y="637" width="42" height="42" fill="#5b78a0" stroke="white" stroke-width="1"/>
+<text x="259.0" y="663.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="280" y="637" width="42" height="42" fill="#2d5083" stroke="white" stroke-width="1"/>
+<text x="301.0" y="663.88" text-anchor="middle" fill="white" class="cell">5.5</text>
+<rect x="322" y="637" width="42" height="42" fill="#3a5b8b" stroke="white" stroke-width="1"/>
+<text x="343.0" y="663.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="364" y="637" width="42" height="42" fill="#4d6c98" stroke="white" stroke-width="1"/>
+<text x="385.0" y="663.88" text-anchor="middle" fill="white" class="cell">4.6</text>
+<rect x="406" y="637" width="42" height="42" fill="#a2b5ce" stroke="white" stroke-width="1"/>
+<text x="427.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">2.2</text>
+<rect x="448" y="637" width="42" height="42" fill="#c0cfe1" stroke="white" stroke-width="1"/>
+<text x="469.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">1.3</text>
+<rect x="490" y="637" width="42" height="42" fill="#6e88ac" stroke="white" stroke-width="1"/>
+<text x="511.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">3.7</text>
+<rect x="532" y="637" width="42" height="42" fill="#6682a8" stroke="white" stroke-width="1"/>
+<text x="553.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="574" y="637" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="595.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="616" y="637" width="42" height="42" fill="#6681a8" stroke="white" stroke-width="1"/>
+<text x="637.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="658" y="637" width="42" height="42" fill="#7c94b6" stroke="white" stroke-width="1"/>
+<text x="679.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">3.3</text>
+<rect x="700" y="637" width="42" height="42" fill="#a1b4cd" stroke="white" stroke-width="1"/>
+<text x="721.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">2.2</text>
+<rect x="742" y="637" width="42" height="42" fill="#466693" stroke="white" stroke-width="1"/>
+<text x="763.0" y="663.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="784" y="637" width="42" height="42" fill="#617da4" stroke="white" stroke-width="1"/>
+<text x="805.0" y="663.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="112" y="679" width="42" height="42" fill="#5d7aa2" stroke="white" stroke-width="1"/>
+<text x="133.0" y="705.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="154" y="679" width="42" height="42" fill="#5a779f" stroke="white" stroke-width="1"/>
+<text x="175.0" y="705.88" text-anchor="middle" fill="white" class="cell">4.3</text>
+<rect x="196" y="679" width="42" height="42" fill="#385a8a" stroke="white" stroke-width="1"/>
+<text x="217.0" y="705.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="238" y="679" width="42" height="42" fill="#9cb0ca" stroke="white" stroke-width="1"/>
+<text x="259.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">2.4</text>
+<rect x="280" y="679" width="42" height="42" fill="#1c4178" stroke="white" stroke-width="1"/>
+<text x="301.0" y="705.88" text-anchor="middle" fill="white" class="cell">6.0</text>
+<rect x="322" y="679" width="42" height="42" fill="#3a5b8b" stroke="white" stroke-width="1"/>
+<text x="343.0" y="705.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="364" y="679" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="385.0" y="705.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="406" y="679" width="42" height="42" fill="#6c87ac" stroke="white" stroke-width="1"/>
+<text x="427.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">3.7</text>
+<rect x="448" y="679" width="42" height="42" fill="#5b78a0" stroke="white" stroke-width="1"/>
+<text x="469.0" y="705.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="490" y="679" width="42" height="42" fill="#738cb0" stroke="white" stroke-width="1"/>
+<text x="511.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">3.5</text>
+<rect x="532" y="679" width="42" height="42" fill="#b0c1d7" stroke="white" stroke-width="1"/>
+<text x="553.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">1.8</text>
+<rect x="574" y="679" width="42" height="42" fill="#6681a8" stroke="white" stroke-width="1"/>
+<text x="595.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="616" y="679" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="637.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="658" y="679" width="42" height="42" fill="#5e7ba3" stroke="white" stroke-width="1"/>
+<text x="679.0" y="705.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="700" y="679" width="42" height="42" fill="#6e88ad" stroke="white" stroke-width="1"/>
+<text x="721.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">3.7</text>
+<rect x="742" y="679" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="763.0" y="705.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="784" y="679" width="42" height="42" fill="#b9c9dd" stroke="white" stroke-width="1"/>
+<text x="805.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">1.5</text>
+<rect x="112" y="721" width="42" height="42" fill="#8097b8" stroke="white" stroke-width="1"/>
+<text x="133.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">3.2</text>
+<rect x="154" y="721" width="42" height="42" fill="#8ba1bf" stroke="white" stroke-width="1"/>
+<text x="175.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">2.8</text>
+<rect x="196" y="721" width="42" height="42" fill="#2f5184" stroke="white" stroke-width="1"/>
+<text x="217.0" y="747.88" text-anchor="middle" fill="white" class="cell">5.5</text>
+<rect x="238" y="721" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="259.0" y="747.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="280" y="721" width="42" height="42" fill="#284c80" stroke="white" stroke-width="1"/>
+<text x="301.0" y="747.88" text-anchor="middle" fill="white" class="cell">5.7</text>
+<rect x="322" y="721" width="42" height="42" fill="#486794" stroke="white" stroke-width="1"/>
+<text x="343.0" y="747.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="364" y="721" width="42" height="42" fill="#57749e" stroke="white" stroke-width="1"/>
+<text x="385.0" y="747.88" text-anchor="middle" fill="white" class="cell">4.3</text>
+<rect x="406" y="721" width="42" height="42" fill="#8aa0bf" stroke="white" stroke-width="1"/>
+<text x="427.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">2.9</text>
+<rect x="448" y="721" width="42" height="42" fill="#7c94b6" stroke="white" stroke-width="1"/>
+<text x="469.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">3.3</text>
+<rect x="490" y="721" width="42" height="42" fill="#6a84aa" stroke="white" stroke-width="1"/>
+<text x="511.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">3.8</text>
+<rect x="532" y="721" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="553.0" y="747.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="574" y="721" width="42" height="42" fill="#7c94b6" stroke="white" stroke-width="1"/>
+<text x="595.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">3.3</text>
+<rect x="616" y="721" width="42" height="42" fill="#5e7ba3" stroke="white" stroke-width="1"/>
+<text x="637.0" y="747.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="658" y="721" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="679.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="700" y="721" width="42" height="42" fill="#869dbc" stroke="white" stroke-width="1"/>
+<text x="721.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">3.0</text>
+<rect x="742" y="721" width="42" height="42" fill="#486794" stroke="white" stroke-width="1"/>
+<text x="763.0" y="747.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="784" y="721" width="42" height="42" fill="#5c79a1" stroke="white" stroke-width="1"/>
+<text x="805.0" y="747.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="112" y="763" width="42" height="42" fill="#7f97b8" stroke="white" stroke-width="1"/>
+<text x="133.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">3.2</text>
+<rect x="154" y="763" width="42" height="42" fill="#7b94b5" stroke="white" stroke-width="1"/>
+<text x="175.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">3.3</text>
+<rect x="196" y="763" width="42" height="42" fill="#4a6995" stroke="white" stroke-width="1"/>
+<text x="217.0" y="789.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="238" y="763" width="42" height="42" fill="#627ea5" stroke="white" stroke-width="1"/>
+<text x="259.0" y="789.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="280" y="763" width="42" height="42" fill="#25497e" stroke="white" stroke-width="1"/>
+<text x="301.0" y="789.88" text-anchor="middle" fill="white" class="cell">5.8</text>
+<rect x="322" y="763" width="42" height="42" fill="#375989" stroke="white" stroke-width="1"/>
+<text x="343.0" y="789.88" text-anchor="middle" fill="white" class="cell">5.2</text>
+<rect x="364" y="763" width="42" height="42" fill="#426290" stroke="white" stroke-width="1"/>
+<text x="385.0" y="789.88" text-anchor="middle" fill="white" class="cell">4.9</text>
+<rect x="406" y="763" width="42" height="42" fill="#6783a8" stroke="white" stroke-width="1"/>
+<text x="427.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="448" y="763" width="42" height="42" fill="#a3b6cf" stroke="white" stroke-width="1"/>
+<text x="469.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">2.1</text>
+<rect x="490" y="763" width="42" height="42" fill="#6782a8" stroke="white" stroke-width="1"/>
+<text x="511.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="532" y="763" width="42" height="42" fill="#607ca4" stroke="white" stroke-width="1"/>
+<text x="553.0" y="789.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="574" y="763" width="42" height="42" fill="#a1b4cd" stroke="white" stroke-width="1"/>
+<text x="595.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">2.2</text>
+<rect x="616" y="763" width="42" height="42" fill="#6e88ad" stroke="white" stroke-width="1"/>
+<text x="637.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">3.7</text>
+<rect x="658" y="763" width="42" height="42" fill="#869dbc" stroke="white" stroke-width="1"/>
+<text x="679.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">3.0</text>
+<rect x="700" y="763" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="721.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="742" y="763" width="42" height="42" fill="#40618f" stroke="white" stroke-width="1"/>
+<text x="763.0" y="789.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="784" y="763" width="42" height="42" fill="#6480a6" stroke="white" stroke-width="1"/>
+<text x="805.0" y="789.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="112" y="805" width="42" height="42" fill="#476794" stroke="white" stroke-width="1"/>
+<text x="133.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="154" y="805" width="42" height="42" fill="#4a6995" stroke="white" stroke-width="1"/>
+<text x="175.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="196" y="805" width="42" height="42" fill="#3d5e8d" stroke="white" stroke-width="1"/>
+<text x="217.0" y="831.88" text-anchor="middle" fill="white" class="cell">5.1</text>
+<rect x="238" y="805" width="42" height="42" fill="#6681a8" stroke="white" stroke-width="1"/>
+<text x="259.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="280" y="805" width="42" height="42" fill="#1c4178" stroke="white" stroke-width="1"/>
+<text x="301.0" y="831.88" text-anchor="middle" fill="white" class="cell">6.0</text>
+<rect x="322" y="805" width="42" height="42" fill="#2d5083" stroke="white" stroke-width="1"/>
+<text x="343.0" y="831.88" text-anchor="middle" fill="white" class="cell">5.5</text>
+<rect x="364" y="805" width="42" height="42" fill="#9db1cb" stroke="white" stroke-width="1"/>
+<text x="385.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">2.3</text>
+<rect x="406" y="805" width="42" height="42" fill="#4a6995" stroke="white" stroke-width="1"/>
+<text x="427.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="448" y="805" width="42" height="42" fill="#4c6b97" stroke="white" stroke-width="1"/>
+<text x="469.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.7</text>
+<rect x="490" y="805" width="42" height="42" fill="#4c6b97" stroke="white" stroke-width="1"/>
+<text x="511.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.6</text>
+<rect x="532" y="805" width="42" height="42" fill="#607ca4" stroke="white" stroke-width="1"/>
+<text x="553.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="574" y="805" width="42" height="42" fill="#466693" stroke="white" stroke-width="1"/>
+<text x="595.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="616" y="805" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="637.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="658" y="805" width="42" height="42" fill="#486794" stroke="white" stroke-width="1"/>
+<text x="679.0" y="831.88" text-anchor="middle" fill="white" class="cell">4.8</text>
+<rect x="700" y="805" width="42" height="42" fill="#40618f" stroke="white" stroke-width="1"/>
+<text x="721.0" y="831.88" text-anchor="middle" fill="white" class="cell">5.0</text>
+<rect x="742" y="805" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="763.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<rect x="784" y="805" width="42" height="42" fill="#6580a7" stroke="white" stroke-width="1"/>
+<text x="805.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="112" y="847" width="42" height="42" fill="#6580a7" stroke="white" stroke-width="1"/>
+<text x="133.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="154" y="847" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="175.0" y="873.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="196" y="847" width="42" height="42" fill="#53719b" stroke="white" stroke-width="1"/>
+<text x="217.0" y="873.88" text-anchor="middle" fill="white" class="cell">4.5</text>
+<rect x="238" y="847" width="42" height="42" fill="#a1b5ce" stroke="white" stroke-width="1"/>
+<text x="259.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">2.2</text>
+<rect x="280" y="847" width="42" height="42" fill="#143a72" stroke="white" stroke-width="1"/>
+<text x="301.0" y="873.88" text-anchor="middle" fill="white" class="cell">6.3</text>
+<rect x="322" y="847" width="42" height="42" fill="#426290" stroke="white" stroke-width="1"/>
+<text x="343.0" y="873.88" text-anchor="middle" fill="white" class="cell">4.9</text>
+<rect x="364" y="847" width="42" height="42" fill="#627ea5" stroke="white" stroke-width="1"/>
+<text x="385.0" y="873.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="406" y="847" width="42" height="42" fill="#6580a7" stroke="white" stroke-width="1"/>
+<text x="427.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="448" y="847" width="42" height="42" fill="#5e7aa2" stroke="white" stroke-width="1"/>
+<text x="469.0" y="873.88" text-anchor="middle" fill="white" class="cell">4.1</text>
+<rect x="490" y="847" width="42" height="42" fill="#708aae" stroke="white" stroke-width="1"/>
+<text x="511.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">3.6</text>
+<rect x="532" y="847" width="42" height="42" fill="#d6e2f0" stroke="white" stroke-width="1"/>
+<text x="553.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.7</text>
+<rect x="574" y="847" width="42" height="42" fill="#617da4" stroke="white" stroke-width="1"/>
+<text x="595.0" y="873.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="616" y="847" width="42" height="42" fill="#b9c9dd" stroke="white" stroke-width="1"/>
+<text x="637.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">1.5</text>
+<rect x="658" y="847" width="42" height="42" fill="#5c79a1" stroke="white" stroke-width="1"/>
+<text x="679.0" y="873.88" text-anchor="middle" fill="white" class="cell">4.2</text>
+<rect x="700" y="847" width="42" height="42" fill="#6480a6" stroke="white" stroke-width="1"/>
+<text x="721.0" y="873.88" text-anchor="middle" fill="white" class="cell">4.0</text>
+<rect x="742" y="847" width="42" height="42" fill="#6580a7" stroke="white" stroke-width="1"/>
+<text x="763.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">3.9</text>
+<rect x="784" y="847" width="42" height="42" fill="#eef7ff" stroke="white" stroke-width="1"/>
+<text x="805.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.0</text>
+<text x="469.0" y="929" text-anchor="middle" class="axis">Structure 2</text>
+<text x="28" y="532.0" transform="rotate(-90 28 532.0)" text-anchor="middle" class="axis">Structure 1</text>
+<text x="1303.0" y="73" text-anchor="middle" class="title">TM-score (average-length normalized)</text>
+<text x="967.0" y="163" transform="rotate(-55 967.0 163)" text-anchor="start" class="axis">AhPV1</text>
+<text x="937" y="203.56" text-anchor="end" class="axis">AhPV1</text>
+<text x="1009.0" y="163" transform="rotate(-55 1009.0 163)" text-anchor="start" class="axis">ALV1</text>
+<text x="937" y="245.56" text-anchor="end" class="axis">ALV1</text>
+<text x="1051.0" y="163" transform="rotate(-55 1051.0 163)" text-anchor="start" class="axis">CaMV</text>
+<text x="937" y="287.56" text-anchor="end" class="axis">CaMV</text>
+<text x="1093.0" y="163" transform="rotate(-55 1093.0 163)" text-anchor="start" class="axis">CMV</text>
+<text x="937" y="329.56" text-anchor="end" class="axis">CMV</text>
+<text x="1135.0" y="163" transform="rotate(-55 1135.0 163)" text-anchor="start" class="axis">HIV-1 RT</text>
+<text x="937" y="371.56" text-anchor="end" class="axis">HIV-1 RT</text>
+<text x="1177.0" y="163" transform="rotate(-55 1177.0 163)" text-anchor="start" class="axis">R2 RT</text>
+<text x="937" y="413.56" text-anchor="end" class="axis">R2 RT</text>
+<text x="1219.0" y="163" transform="rotate(-55 1219.0 163)" text-anchor="start" class="axis">PlAMV</text>
+<text x="937" y="455.56" text-anchor="end" class="axis">PlAMV</text>
+<text x="1261.0" y="163" transform="rotate(-55 1261.0 163)" text-anchor="start" class="axis">PLrV</text>
+<text x="937" y="497.56" text-anchor="end" class="axis">PLrV</text>
+<text x="1303.0" y="163" transform="rotate(-55 1303.0 163)" text-anchor="start" class="axis">RYMV</text>
+<text x="937" y="539.56" text-anchor="end" class="axis">RYMV</text>
+<text x="1345.0" y="163" transform="rotate(-55 1345.0 163)" text-anchor="start" class="axis">TCV</text>
+<text x="937" y="581.56" text-anchor="end" class="axis">TCV</text>
+<text x="1387.0" y="163" transform="rotate(-55 1387.0 163)" text-anchor="start" class="axis">TMV</text>
+<text x="937" y="623.56" text-anchor="end" class="axis">TMV</text>
+<text x="1429.0" y="163" transform="rotate(-55 1429.0 163)" text-anchor="start" class="axis">TRoV</text>
+<text x="937" y="665.56" text-anchor="end" class="axis">TRoV</text>
+<text x="1471.0" y="163" transform="rotate(-55 1471.0 163)" text-anchor="start" class="axis">TRV</text>
+<text x="937" y="707.56" text-anchor="end" class="axis">TRV</text>
+<text x="1513.0" y="163" transform="rotate(-55 1513.0 163)" text-anchor="start" class="axis">TuMV</text>
+<text x="937" y="749.56" text-anchor="end" class="axis">TuMV</text>
+<text x="1555.0" y="163" transform="rotate(-55 1555.0 163)" text-anchor="start" class="axis">TuYV</text>
+<text x="937" y="791.56" text-anchor="end" class="axis">TuYV</text>
+<text x="1597.0" y="163" transform="rotate(-55 1597.0 163)" text-anchor="start" class="axis">TYMV</text>
+<text x="937" y="833.56" text-anchor="end" class="axis">TYMV</text>
+<text x="1639.0" y="163" transform="rotate(-55 1639.0 163)" text-anchor="start" class="axis">YoMV</text>
+<text x="937" y="875.56" text-anchor="end" class="axis">YoMV</text>
+<rect x="946" y="175" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="967.0" y="201.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="988" y="175" width="42" height="42" fill="#a96c51" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="201.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="1030" y="175" width="42" height="42" fill="#cba38e" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="175" width="42" height="42" fill="#b37c62" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.59</text>
+<rect x="1114" y="175" width="42" height="42" fill="#d0ab98" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.36</text>
+<rect x="1156" y="175" width="42" height="42" fill="#bf9079" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.50</text>
+<rect x="1198" y="175" width="42" height="42" fill="#b68068" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.57</text>
+<rect x="1240" y="175" width="42" height="42" fill="#c3957f" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1282" y="175" width="42" height="42" fill="#a46347" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="201.88" text-anchor="middle" fill="white" class="cell">0.71</text>
+<rect x="1324" y="175" width="42" height="42" fill="#ab6f54" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="201.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1366" y="175" width="42" height="42" fill="#b27960" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.60</text>
+<rect x="1408" y="175" width="42" height="42" fill="#a6664a" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="201.88" text-anchor="middle" fill="white" class="cell">0.70</text>
+<rect x="1450" y="175" width="42" height="42" fill="#af755b" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.62</text>
+<rect x="1492" y="175" width="42" height="42" fill="#a05d40" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="201.88" text-anchor="middle" fill="white" class="cell">0.74</text>
+<rect x="1534" y="175" width="42" height="42" fill="#c1937c" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.48</text>
+<rect x="1576" y="175" width="42" height="42" fill="#b9856d" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.55</text>
+<rect x="1618" y="175" width="42" height="42" fill="#b0775d" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="201.88" text-anchor="middle" fill="#111111" class="cell">0.62</text>
+<rect x="946" y="217" width="42" height="42" fill="#a96c51" stroke="white" stroke-width="1"/>
+<text x="967.0" y="243.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="988" y="217" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="243.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1030" y="217" width="42" height="42" fill="#cfa995" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.37</text>
+<rect x="1072" y="217" width="42" height="42" fill="#b1785e" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1114" y="217" width="42" height="42" fill="#d3b09d" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1156" y="217" width="42" height="42" fill="#c49781" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.46</text>
+<rect x="1198" y="217" width="42" height="42" fill="#b8846c" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.55</text>
+<rect x="1240" y="217" width="42" height="42" fill="#c3967f" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1282" y="217" width="42" height="42" fill="#a36245" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="243.88" text-anchor="middle" fill="white" class="cell">0.72</text>
+<rect x="1324" y="217" width="42" height="42" fill="#af765c" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.62</text>
+<rect x="1366" y="217" width="42" height="42" fill="#b1775e" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1408" y="217" width="42" height="42" fill="#a15e42" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="243.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1450" y="217" width="42" height="42" fill="#b1785e" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1492" y="217" width="42" height="42" fill="#a15f42" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="243.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1534" y="217" width="42" height="42" fill="#c2947e" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1576" y="217" width="42" height="42" fill="#bb8971" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.53</text>
+<rect x="1618" y="217" width="42" height="42" fill="#af755a" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="243.88" text-anchor="middle" fill="#111111" class="cell">0.63</text>
+<rect x="946" y="259" width="42" height="42" fill="#cba38e" stroke="white" stroke-width="1"/>
+<text x="967.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="988" y="259" width="42" height="42" fill="#cfa995" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.37</text>
+<rect x="1030" y="259" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="285.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1072" y="259" width="42" height="42" fill="#caa18c" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1114" y="259" width="42" height="42" fill="#caa18c" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1156" y="259" width="42" height="42" fill="#caa18d" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1198" y="259" width="42" height="42" fill="#cba28e" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1240" y="259" width="42" height="42" fill="#ddc0ae" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.27</text>
+<rect x="1282" y="259" width="42" height="42" fill="#c99f8a" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.42</text>
+<rect x="1324" y="259" width="42" height="42" fill="#c89e89" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.43</text>
+<rect x="1366" y="259" width="42" height="42" fill="#cca38f" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.40</text>
+<rect x="1408" y="259" width="42" height="42" fill="#cba28d" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1450" y="259" width="42" height="42" fill="#cba28d" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1492" y="259" width="42" height="42" fill="#c79c86" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1534" y="259" width="42" height="42" fill="#dcbeac" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.28</text>
+<rect x="1576" y="259" width="42" height="42" fill="#cba28d" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1618" y="259" width="42" height="42" fill="#caa28d" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="285.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="946" y="301" width="42" height="42" fill="#b37c62" stroke="white" stroke-width="1"/>
+<text x="967.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">0.59</text>
+<rect x="988" y="301" width="42" height="42" fill="#b1785e" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1030" y="301" width="42" height="42" fill="#caa18c" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="301" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="327.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1114" y="301" width="42" height="42" fill="#d4b19e" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1156" y="301" width="42" height="42" fill="#c3957f" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1198" y="301" width="42" height="42" fill="#a36145" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.72</text>
+<rect x="1240" y="301" width="42" height="42" fill="#c79c86" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1282" y="301" width="42" height="42" fill="#ad7157" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.64</text>
+<rect x="1324" y="301" width="42" height="42" fill="#a36145" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.72</text>
+<rect x="1366" y="301" width="42" height="42" fill="#8b3a1a" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.91</text>
+<rect x="1408" y="301" width="42" height="42" fill="#ac7056" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.65</text>
+<rect x="1450" y="301" width="42" height="42" fill="#8d3e1e" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.89</text>
+<rect x="1492" y="301" width="42" height="42" fill="#ab6f54" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.65</text>
+<rect x="1534" y="301" width="42" height="42" fill="#c69a84" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="327.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1576" y="301" width="42" height="42" fill="#a86a4f" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.68</text>
+<rect x="1618" y="301" width="42" height="42" fill="#893716" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="327.88" text-anchor="middle" fill="white" class="cell">0.92</text>
+<rect x="946" y="343" width="42" height="42" fill="#d0ab98" stroke="white" stroke-width="1"/>
+<text x="967.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.36</text>
+<rect x="988" y="343" width="42" height="42" fill="#d3b09d" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1030" y="343" width="42" height="42" fill="#caa18c" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="343" width="42" height="42" fill="#d4b19e" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1114" y="343" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="369.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1156" y="343" width="42" height="42" fill="#d6b4a2" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.32</text>
+<rect x="1198" y="343" width="42" height="42" fill="#d4b19e" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1240" y="343" width="42" height="42" fill="#e2c7b7" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.23</text>
+<rect x="1282" y="343" width="42" height="42" fill="#d2ae9a" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.35</text>
+<rect x="1324" y="343" width="42" height="42" fill="#d1ac98" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.36</text>
+<rect x="1366" y="343" width="42" height="42" fill="#d5b3a0" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.33</text>
+<rect x="1408" y="343" width="42" height="42" fill="#d2ae9a" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.35</text>
+<rect x="1450" y="343" width="42" height="42" fill="#d4b19e" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1492" y="343" width="42" height="42" fill="#d2ad9a" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.35</text>
+<rect x="1534" y="343" width="42" height="42" fill="#e2c7b7" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.23</text>
+<rect x="1576" y="343" width="42" height="42" fill="#d5b3a0" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.33</text>
+<rect x="1618" y="343" width="42" height="42" fill="#d4b19e" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="369.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="946" y="385" width="42" height="42" fill="#bf9079" stroke="white" stroke-width="1"/>
+<text x="967.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.50</text>
+<rect x="988" y="385" width="42" height="42" fill="#c49781" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.46</text>
+<rect x="1030" y="385" width="42" height="42" fill="#caa18d" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="385" width="42" height="42" fill="#c3957f" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1114" y="385" width="42" height="42" fill="#d6b4a2" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.32</text>
+<rect x="1156" y="385" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="411.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1198" y="385" width="42" height="42" fill="#c39680" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1240" y="385" width="42" height="42" fill="#d0ab98" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.36</text>
+<rect x="1282" y="385" width="42" height="42" fill="#be8e77" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.51</text>
+<rect x="1324" y="385" width="42" height="42" fill="#c09079" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.50</text>
+<rect x="1366" y="385" width="42" height="42" fill="#c2947d" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.48</text>
+<rect x="1408" y="385" width="42" height="42" fill="#c0917a" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.49</text>
+<rect x="1450" y="385" width="42" height="42" fill="#c0917a" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.49</text>
+<rect x="1492" y="385" width="42" height="42" fill="#b57f66" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.58</text>
+<rect x="1534" y="385" width="42" height="42" fill="#cfaa96" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.37</text>
+<rect x="1576" y="385" width="42" height="42" fill="#c49781" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.46</text>
+<rect x="1618" y="385" width="42" height="42" fill="#c1927c" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="411.88" text-anchor="middle" fill="#111111" class="cell">0.48</text>
+<rect x="946" y="427" width="42" height="42" fill="#b68068" stroke="white" stroke-width="1"/>
+<text x="967.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.57</text>
+<rect x="988" y="427" width="42" height="42" fill="#b8846c" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.55</text>
+<rect x="1030" y="427" width="42" height="42" fill="#cba28e" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="427" width="42" height="42" fill="#a36145" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="453.88" text-anchor="middle" fill="white" class="cell">0.72</text>
+<rect x="1114" y="427" width="42" height="42" fill="#d4b19e" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1156" y="427" width="42" height="42" fill="#c39680" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1198" y="427" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="453.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1240" y="427" width="42" height="42" fill="#cba28d" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1282" y="427" width="42" height="42" fill="#b0775d" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.62</text>
+<rect x="1324" y="427" width="42" height="42" fill="#ae745a" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.63</text>
+<rect x="1366" y="427" width="42" height="42" fill="#a25f43" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="453.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1408" y="427" width="42" height="42" fill="#b1795f" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1450" y="427" width="42" height="42" fill="#a46347" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="453.88" text-anchor="middle" fill="white" class="cell">0.71</text>
+<rect x="1492" y="427" width="42" height="42" fill="#b1785f" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1534" y="427" width="42" height="42" fill="#caa18c" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="453.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1576" y="427" width="42" height="42" fill="#924626" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="453.88" text-anchor="middle" fill="white" class="cell">0.85</text>
+<rect x="1618" y="427" width="42" height="42" fill="#a15e42" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="453.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="946" y="469" width="42" height="42" fill="#c3957f" stroke="white" stroke-width="1"/>
+<text x="967.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="988" y="469" width="42" height="42" fill="#c3967f" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1030" y="469" width="42" height="42" fill="#ddc0ae" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.27</text>
+<rect x="1072" y="469" width="42" height="42" fill="#c79c86" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1114" y="469" width="42" height="42" fill="#e2c7b7" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.23</text>
+<rect x="1156" y="469" width="42" height="42" fill="#d0ab98" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.36</text>
+<rect x="1198" y="469" width="42" height="42" fill="#cba28d" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1240" y="469" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="495.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1282" y="469" width="42" height="42" fill="#b9856d" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.55</text>
+<rect x="1324" y="469" width="42" height="42" fill="#c69b85" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1366" y="469" width="42" height="42" fill="#c79c86" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1408" y="469" width="42" height="42" fill="#b9856d" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.55</text>
+<rect x="1450" y="469" width="42" height="42" fill="#c79b86" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1492" y="469" width="42" height="42" fill="#bf8f78" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.50</text>
+<rect x="1534" y="469" width="42" height="42" fill="#bc8a73" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.52</text>
+<rect x="1576" y="469" width="42" height="42" fill="#cca48f" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.40</text>
+<rect x="1618" y="469" width="42" height="42" fill="#c69b85" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="495.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="946" y="511" width="42" height="42" fill="#a46347" stroke="white" stroke-width="1"/>
+<text x="967.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.71</text>
+<rect x="988" y="511" width="42" height="42" fill="#a36245" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.72</text>
+<rect x="1030" y="511" width="42" height="42" fill="#c99f8a" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">0.42</text>
+<rect x="1072" y="511" width="42" height="42" fill="#ad7157" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.64</text>
+<rect x="1114" y="511" width="42" height="42" fill="#d2ae9a" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">0.35</text>
+<rect x="1156" y="511" width="42" height="42" fill="#be8e77" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">0.51</text>
+<rect x="1198" y="511" width="42" height="42" fill="#b0775d" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">0.62</text>
+<rect x="1240" y="511" width="42" height="42" fill="#b9856d" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">0.55</text>
+<rect x="1282" y="511" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="537.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1324" y="511" width="42" height="42" fill="#aa6d52" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1366" y="511" width="42" height="42" fill="#ab6e54" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1408" y="511" width="42" height="42" fill="#85310f" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.95</text>
+<rect x="1450" y="511" width="42" height="42" fill="#ab6e53" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1492" y="511" width="42" height="42" fill="#9f5a3d" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.75</text>
+<rect x="1534" y="511" width="42" height="42" fill="#b8836b" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">0.56</text>
+<rect x="1576" y="511" width="42" height="42" fill="#b37b62" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="537.88" text-anchor="middle" fill="#111111" class="cell">0.60</text>
+<rect x="1618" y="511" width="42" height="42" fill="#a96c51" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="537.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="946" y="553" width="42" height="42" fill="#ab6f54" stroke="white" stroke-width="1"/>
+<text x="967.0" y="579.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="988" y="553" width="42" height="42" fill="#af765c" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.62</text>
+<rect x="1030" y="553" width="42" height="42" fill="#c89e89" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.43</text>
+<rect x="1072" y="553" width="42" height="42" fill="#a36145" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="579.88" text-anchor="middle" fill="white" class="cell">0.72</text>
+<rect x="1114" y="553" width="42" height="42" fill="#d1ac98" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.36</text>
+<rect x="1156" y="553" width="42" height="42" fill="#c09079" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.50</text>
+<rect x="1198" y="553" width="42" height="42" fill="#ae745a" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.63</text>
+<rect x="1240" y="553" width="42" height="42" fill="#c69b85" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1282" y="553" width="42" height="42" fill="#aa6d52" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="579.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1324" y="553" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="579.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1366" y="553" width="42" height="42" fill="#a26144" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="579.88" text-anchor="middle" fill="white" class="cell">0.72</text>
+<rect x="1408" y="553" width="42" height="42" fill="#aa6d52" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="579.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="1450" y="553" width="42" height="42" fill="#a26043" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="579.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1492" y="553" width="42" height="42" fill="#a7674c" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="579.88" text-anchor="middle" fill="white" class="cell">0.69</text>
+<rect x="1534" y="553" width="42" height="42" fill="#c59983" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1576" y="553" width="42" height="42" fill="#b37b62" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="579.88" text-anchor="middle" fill="#111111" class="cell">0.59</text>
+<rect x="1618" y="553" width="42" height="42" fill="#a15e41" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="579.88" text-anchor="middle" fill="white" class="cell">0.74</text>
+<rect x="946" y="595" width="42" height="42" fill="#b27960" stroke="white" stroke-width="1"/>
+<text x="967.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.60</text>
+<rect x="988" y="595" width="42" height="42" fill="#b1775e" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1030" y="595" width="42" height="42" fill="#cca38f" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.40</text>
+<rect x="1072" y="595" width="42" height="42" fill="#8b3a1a" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.91</text>
+<rect x="1114" y="595" width="42" height="42" fill="#d5b3a0" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.33</text>
+<rect x="1156" y="595" width="42" height="42" fill="#c2947d" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.48</text>
+<rect x="1198" y="595" width="42" height="42" fill="#a25f43" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1240" y="595" width="42" height="42" fill="#c79c86" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1282" y="595" width="42" height="42" fill="#ab6e54" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1324" y="595" width="42" height="42" fill="#a26144" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.72</text>
+<rect x="1366" y="595" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="621.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1408" y="595" width="42" height="42" fill="#ab6e53" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1450" y="595" width="42" height="42" fill="#8a3817" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.92</text>
+<rect x="1492" y="595" width="42" height="42" fill="#ab6f54" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.65</text>
+<rect x="1534" y="595" width="42" height="42" fill="#c59983" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="621.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1576" y="595" width="42" height="42" fill="#a7684c" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.69</text>
+<rect x="1618" y="595" width="42" height="42" fill="#832d0b" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="621.88" text-anchor="middle" fill="white" class="cell">0.97</text>
+<rect x="946" y="637" width="42" height="42" fill="#a6664a" stroke="white" stroke-width="1"/>
+<text x="967.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.70</text>
+<rect x="988" y="637" width="42" height="42" fill="#a15e42" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1030" y="637" width="42" height="42" fill="#cba28d" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="637" width="42" height="42" fill="#ac7056" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.65</text>
+<rect x="1114" y="637" width="42" height="42" fill="#d2ae9a" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">0.35</text>
+<rect x="1156" y="637" width="42" height="42" fill="#c0917a" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">0.49</text>
+<rect x="1198" y="637" width="42" height="42" fill="#b1795f" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1240" y="637" width="42" height="42" fill="#b9856d" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">0.55</text>
+<rect x="1282" y="637" width="42" height="42" fill="#85310f" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.95</text>
+<rect x="1324" y="637" width="42" height="42" fill="#aa6d52" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="1366" y="637" width="42" height="42" fill="#ab6e53" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1408" y="637" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="663.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1450" y="637" width="42" height="42" fill="#ab6e53" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1492" y="637" width="42" height="42" fill="#a05d40" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.74</text>
+<rect x="1534" y="637" width="42" height="42" fill="#b8836b" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">0.56</text>
+<rect x="1576" y="637" width="42" height="42" fill="#b57f67" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="663.88" text-anchor="middle" fill="#111111" class="cell">0.57</text>
+<rect x="1618" y="637" width="42" height="42" fill="#a96b50" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="663.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="946" y="679" width="42" height="42" fill="#af755b" stroke="white" stroke-width="1"/>
+<text x="967.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">0.62</text>
+<rect x="988" y="679" width="42" height="42" fill="#b1785e" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1030" y="679" width="42" height="42" fill="#cba28d" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="679" width="42" height="42" fill="#8d3e1e" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.89</text>
+<rect x="1114" y="679" width="42" height="42" fill="#d4b19e" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1156" y="679" width="42" height="42" fill="#c0917a" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">0.49</text>
+<rect x="1198" y="679" width="42" height="42" fill="#a46347" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.71</text>
+<rect x="1240" y="679" width="42" height="42" fill="#c79b86" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1282" y="679" width="42" height="42" fill="#ab6e53" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1324" y="679" width="42" height="42" fill="#a26043" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1366" y="679" width="42" height="42" fill="#8a3817" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.92</text>
+<rect x="1408" y="679" width="42" height="42" fill="#ab6e53" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.66</text>
+<rect x="1450" y="679" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="705.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1492" y="679" width="42" height="42" fill="#a86a4f" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.68</text>
+<rect x="1534" y="679" width="42" height="42" fill="#c59983" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="705.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1576" y="679" width="42" height="42" fill="#a7684d" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.69</text>
+<rect x="1618" y="679" width="42" height="42" fill="#873413" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="705.88" text-anchor="middle" fill="white" class="cell">0.94</text>
+<rect x="946" y="721" width="42" height="42" fill="#a05d40" stroke="white" stroke-width="1"/>
+<text x="967.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.74</text>
+<rect x="988" y="721" width="42" height="42" fill="#a15f42" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1030" y="721" width="42" height="42" fill="#c79c86" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1072" y="721" width="42" height="42" fill="#ab6f54" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.65</text>
+<rect x="1114" y="721" width="42" height="42" fill="#d2ad9a" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">0.35</text>
+<rect x="1156" y="721" width="42" height="42" fill="#b57f66" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">0.58</text>
+<rect x="1198" y="721" width="42" height="42" fill="#b1785f" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">0.61</text>
+<rect x="1240" y="721" width="42" height="42" fill="#bf8f78" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">0.50</text>
+<rect x="1282" y="721" width="42" height="42" fill="#9f5a3d" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.75</text>
+<rect x="1324" y="721" width="42" height="42" fill="#a7674c" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.69</text>
+<rect x="1366" y="721" width="42" height="42" fill="#ab6f54" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.65</text>
+<rect x="1408" y="721" width="42" height="42" fill="#a05d40" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.74</text>
+<rect x="1450" y="721" width="42" height="42" fill="#a86a4f" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.68</text>
+<rect x="1492" y="721" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="747.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1534" y="721" width="42" height="42" fill="#bd8c75" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">0.51</text>
+<rect x="1576" y="721" width="42" height="42" fill="#b37b62" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="747.88" text-anchor="middle" fill="#111111" class="cell">0.59</text>
+<rect x="1618" y="721" width="42" height="42" fill="#aa6c51" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="747.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="946" y="763" width="42" height="42" fill="#c1937c" stroke="white" stroke-width="1"/>
+<text x="967.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.48</text>
+<rect x="988" y="763" width="42" height="42" fill="#c2947e" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.47</text>
+<rect x="1030" y="763" width="42" height="42" fill="#dcbeac" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.28</text>
+<rect x="1072" y="763" width="42" height="42" fill="#c69a84" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1114" y="763" width="42" height="42" fill="#e2c7b7" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.23</text>
+<rect x="1156" y="763" width="42" height="42" fill="#cfaa96" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.37</text>
+<rect x="1198" y="763" width="42" height="42" fill="#caa18c" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1240" y="763" width="42" height="42" fill="#bc8a73" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.52</text>
+<rect x="1282" y="763" width="42" height="42" fill="#b8836b" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.56</text>
+<rect x="1324" y="763" width="42" height="42" fill="#c59983" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1366" y="763" width="42" height="42" fill="#c59983" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1408" y="763" width="42" height="42" fill="#b8836b" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.56</text>
+<rect x="1450" y="763" width="42" height="42" fill="#c59983" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1492" y="763" width="42" height="42" fill="#bd8c75" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.51</text>
+<rect x="1534" y="763" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="789.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1576" y="763" width="42" height="42" fill="#cba38e" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.40</text>
+<rect x="1618" y="763" width="42" height="42" fill="#c59983" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="789.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="946" y="805" width="42" height="42" fill="#b9856d" stroke="white" stroke-width="1"/>
+<text x="967.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.55</text>
+<rect x="988" y="805" width="42" height="42" fill="#bb8971" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.53</text>
+<rect x="1030" y="805" width="42" height="42" fill="#cba28d" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="805" width="42" height="42" fill="#a86a4f" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="831.88" text-anchor="middle" fill="white" class="cell">0.68</text>
+<rect x="1114" y="805" width="42" height="42" fill="#d5b3a0" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.33</text>
+<rect x="1156" y="805" width="42" height="42" fill="#c49781" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.46</text>
+<rect x="1198" y="805" width="42" height="42" fill="#924626" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="831.88" text-anchor="middle" fill="white" class="cell">0.85</text>
+<rect x="1240" y="805" width="42" height="42" fill="#cca48f" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.40</text>
+<rect x="1282" y="805" width="42" height="42" fill="#b37b62" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.60</text>
+<rect x="1324" y="805" width="42" height="42" fill="#b37b62" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.59</text>
+<rect x="1366" y="805" width="42" height="42" fill="#a7684c" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="831.88" text-anchor="middle" fill="white" class="cell">0.69</text>
+<rect x="1408" y="805" width="42" height="42" fill="#b57f67" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.57</text>
+<rect x="1450" y="805" width="42" height="42" fill="#a7684d" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="831.88" text-anchor="middle" fill="white" class="cell">0.69</text>
+<rect x="1492" y="805" width="42" height="42" fill="#b37b62" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.59</text>
+<rect x="1534" y="805" width="42" height="42" fill="#cba38e" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="831.88" text-anchor="middle" fill="#111111" class="cell">0.40</text>
+<rect x="1576" y="805" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="831.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<rect x="1618" y="805" width="42" height="42" fill="#a6674b" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="831.88" text-anchor="middle" fill="white" class="cell">0.69</text>
+<rect x="946" y="847" width="42" height="42" fill="#b0775d" stroke="white" stroke-width="1"/>
+<text x="967.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.62</text>
+<rect x="988" y="847" width="42" height="42" fill="#af755a" stroke="white" stroke-width="1"/>
+<text x="1009.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.63</text>
+<rect x="1030" y="847" width="42" height="42" fill="#caa28d" stroke="white" stroke-width="1"/>
+<text x="1051.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.41</text>
+<rect x="1072" y="847" width="42" height="42" fill="#893716" stroke="white" stroke-width="1"/>
+<text x="1093.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.92</text>
+<rect x="1114" y="847" width="42" height="42" fill="#d4b19e" stroke="white" stroke-width="1"/>
+<text x="1135.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.34</text>
+<rect x="1156" y="847" width="42" height="42" fill="#c1927c" stroke="white" stroke-width="1"/>
+<text x="1177.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.48</text>
+<rect x="1198" y="847" width="42" height="42" fill="#a15e42" stroke="white" stroke-width="1"/>
+<text x="1219.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.73</text>
+<rect x="1240" y="847" width="42" height="42" fill="#c69b85" stroke="white" stroke-width="1"/>
+<text x="1261.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.44</text>
+<rect x="1282" y="847" width="42" height="42" fill="#a96c51" stroke="white" stroke-width="1"/>
+<text x="1303.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="1324" y="847" width="42" height="42" fill="#a15e41" stroke="white" stroke-width="1"/>
+<text x="1345.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.74</text>
+<rect x="1366" y="847" width="42" height="42" fill="#832d0b" stroke="white" stroke-width="1"/>
+<text x="1387.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.97</text>
+<rect x="1408" y="847" width="42" height="42" fill="#a96b50" stroke="white" stroke-width="1"/>
+<text x="1429.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="1450" y="847" width="42" height="42" fill="#873413" stroke="white" stroke-width="1"/>
+<text x="1471.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.94</text>
+<rect x="1492" y="847" width="42" height="42" fill="#aa6c51" stroke="white" stroke-width="1"/>
+<text x="1513.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.67</text>
+<rect x="1534" y="847" width="42" height="42" fill="#c59983" stroke="white" stroke-width="1"/>
+<text x="1555.0" y="873.88" text-anchor="middle" fill="#111111" class="cell">0.45</text>
+<rect x="1576" y="847" width="42" height="42" fill="#a6674b" stroke="white" stroke-width="1"/>
+<text x="1597.0" y="873.88" text-anchor="middle" fill="white" class="cell">0.69</text>
+<rect x="1618" y="847" width="42" height="42" fill="#7f2704" stroke="white" stroke-width="1"/>
+<text x="1639.0" y="873.88" text-anchor="middle" fill="white" class="cell">1.00</text>
+<text x="1303.0" y="929" text-anchor="middle" class="axis">Structure 2</text>
+<text x="862" y="532.0" transform="rotate(-90 862 532.0)" text-anchor="middle" class="axis">Structure 1</text>
+<text x="886.0" y="977" text-anchor="middle" class="axis">Diagonal values represent self-comparisons; all off-diagonal cells correspond to the 136 unique pairwise alignments.</text>
+</svg>
