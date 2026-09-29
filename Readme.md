@@ -20,10 +20,10 @@ were obtained from NCBI Bioprojects: TuMV PRJNA788379
 \[[5](#ref-liu2025mutually)\] and ArLV1 PRJNA863409
 \[[6](#ref-jiang2024deciphering)\]. Read processing, alignment, and
 gene-level quantification was addressed by mapping with HISAT2 v2.2.1
-(Kim et al., 2019) to TAIR10 reference genome and quantifying with
-featureCounts (Liao et al., 2014). Differential expression was computed
-separately within each using DESeq2 DEGs were calculated using Deseq2
-(Love et al., 2014).
+\[[7](#ref-kim2019graph)\] to TAIR10 reference genome and quantifying
+with featureCounts \[[8](#ref-liao2014featurecounts)\]. Differential
+expression was computed separately within each using DESeq2 DEGs were
+calculated using Deseq2 \[[9](#ref-love2014moderated)\].
 
 ## Libraries re-mapped
 
@@ -255,16 +255,17 @@ where the replication protein is polyprotein-derived (e.g., TRoV P2ab),
 sequences were processed to extract the annotated mature peptide
 corresponding to the RdRP-containing product, final sequences are
 available in this repository. Each curated protein was then folded using
-AlphaFold2 (Jumper et al., 2021), while CaMV P5 PBD was the only RdRp
-experimentally elucidated (PDB: 8R0S)
-\[[7](#ref-prabaharan2024structural)\]. To build a structure-based
+AlphaFold2 \[[10](#ref-jumper2021highly)\], while CaMV P5 PBD was the
+only RdRp experimentally elucidated (PDB: 8R0S)
+\[[11](#ref-prabaharan2024structural)\]. To build a structure-based
 phylogeny, an initial structural reconstruction was performed using the
 predicted RdRP models, and a non-LTR retrotransposon reverse
 transcriptase structure (PDB: 8GH6) was included as an outgroup, in a
-similar way to Wolf et al. (2018). Finally, a consensus topology was
-obtained by performing an agreement analysis between trees generated
-from DALI (Holm, 2022) and Foldtree (Moi et al., 2025) outputs,
-retaining and scoring clades supported by both approaches.
+similar way to \[[12](#ref-wolf2018origins)\]. Finally, a consensus
+topology was obtained by performing an agreement analysis between trees
+generated from DALI \[[13](#ref-holm2022dali)\] and Foldtree
+\[[14](#ref-moi2025structural)\] outputs, retaining and scoring clades
+supported by both approaches.
 
 ## PDB sequence post-processing
 
@@ -283,32 +284,32 @@ structures, this field contains experimental B-factors or related
 quality values rather than pLDDT and is therefore reported as not
 applicable (N/A).
 
-| PDB file                                           | Protein or construct                           | Sequence post-processing                                                                            | Retained PDB range | Residues in PDB | Mean pLDDT | Published-structure citation           |
-|:---------------------------------------------------|:-----------------------------------------------|:----------------------------------------------------------------------------------------------------|:------------------:|----------------:|-----------:|:---------------------------------------|
-| `ahpv1_rdrp_relax_m3_p0_plddt-90.pdb`              | AhPV1 RdRp                                     | Complete submitted RdRp sequence retained; no terminal trimming                                     |      A:1–585       |             585 |      90.61 | –                                      |
-| `alv1_p1_1140_1610.pdb`                            | ALV1 P1                                        | N-terminal region removed to retain the C-terminal RdRp region; the stored endpoint is residue 1610 |    A:1140–1610     |             471 |      87.78 | –                                      |
-| `CaMV_P5_8R0S.pdb`                                 | CaMV P5 reverse transcriptase                  | Protein chain A retained from the experimental structure; bound nucleic-acid chains were removed    |      A:1–475       |             470 |        N/A | \[[7](#ref-prabaharan2024structural)\] |
-| `CMV_2a_273-750.pdb`                               | CMV 2a                                         | Internal RdRp-containing region extracted from the replication protein                              |     A:273–750      |             478 |      88.20 | –                                      |
-| `HIV1RT_3DLK.pdb`                                  | HIV-1 reverse transcriptase                    | Protein chain B retained from the experimental structure                                            |      B:6–428       |             409 |        N/A | \[[8](#ref-bauman2008crystal)\]        |
-| `nonLTR_RT_8gh6_1_924.pdb`                         | *Bombyx mori* R2 non-LTR reverse transcriptase | Protein chain A retained from the experimental structure; bound RNA and DNA chains were removed     |     A:111–924      |             715 |        N/A | \[[9](#ref-wilkinson2023structure)\]   |
-| `PlAMV_RdRp_q07518_895_1385.pdb`                   | PlAMV RdRp                                     | C-terminal RdRp-containing region extracted from the replication protein                            |     A:895–1385     |             491 |      85.61 | –                                      |
-| `PLrV_Polerovirus_P11623_relax_m4_p0_plddt-78.pdb` | PLrV replication protein                       | Complete submitted replication-protein sequence retained; no terminal trimming                      |      A:1–1062      |            1062 |      77.77 | –                                      |
-| `rymv_rdrp_1_464.pdb`                              | RYMV RdRp                                      | Complete submitted RdRp sequence retained; no terminal trimming                                     |      A:1–464       |             464 |      93.93 | –                                      |
-| `tcv_rdrp_relax_m1_p0_plddt-92.pdb`                | TCV RdRp                                       | Complete submitted RdRp sequence retained; no terminal trimming                                     |      A:1–524       |             524 |      92.56 | –                                      |
-| `tmv_rdrp_1117_relax_m3_p0_plddt-91.pdb`           | TMV RdRp                                       | C-terminal RdRp region beginning at source residue 1117 extracted and renumbered from 1 in the PDB  |      A:1–499       |             499 |      91.20 | –                                      |
-| `trov_p2ab_428.pdb`                                | TRoV P2ab                                      | N-terminal region removed to retain the mature RdRp-containing product                              |     A:428–874      |             447 |      91.61 | –                                      |
-| `trv_134k_1206_1707.pdb`                           | TRV 134K                                       | C-terminal RdRp-containing region extracted                                                         |    A:1206–1707     |             502 |      86.51 | –                                      |
-| `TuMV_NIb_m2_plddt-93.pdb`                         | TuMV NIb                                       | Mature NIb product extracted from the viral polyprotein and renumbered from 1                       |      A:1–517       |             517 |      93.20 | –                                      |
-| `TuYV_RdRP_p09507_relax_m1_p0_plddt-80.pdb`        | TuYV replication protein                       | Complete submitted replication-protein sequence retained; no terminal trimming                      |      A:1–1035      |            1035 |      80.63 | –                                      |
-| `tymv_206k_1298.pdb`                               | TyMV 206K                                      | N-terminal region removed to retain the C-terminal RdRp-containing region                           |    A:1298–1844     |             547 |      82.12 | –                                      |
-| `YoMV_RdRP_q66220_1120_1597.pdb`                   | YoMV RdRp                                      | C-terminal RdRp-containing region extracted from the replication protein                            |    A:1120–1597     |             478 |      88.25 | –                                      |
+| PDB file                                           | Protein or construct                           | Sequence post-processing                                                                            | Retained PDB range | Residues in PDB | Mean pLDDT | Published-structure citation            |
+|:---------------------------------------------------|:-----------------------------------------------|:----------------------------------------------------------------------------------------------------|:------------------:|----------------:|-----------:|:----------------------------------------|
+| `ahpv1_rdrp_relax_m3_p0_plddt-90.pdb`              | AhPV1 RdRp                                     | Complete submitted RdRp sequence retained; no terminal trimming                                     |      A:1–585       |             585 |      90.61 | –                                       |
+| `alv1_p1_1140_1610.pdb`                            | ALV1 P1                                        | N-terminal region removed to retain the C-terminal RdRp region; the stored endpoint is residue 1610 |    A:1140–1610     |             471 |      87.78 | –                                       |
+| `CaMV_P5_8R0S.pdb`                                 | CaMV P5 reverse transcriptase                  | Protein chain A retained from the experimental structure; bound nucleic-acid chains were removed    |      A:1–475       |             470 |        N/A | \[[11](#ref-prabaharan2024structural)\] |
+| `CMV_2a_273-750.pdb`                               | CMV 2a                                         | Internal RdRp-containing region extracted from the replication protein                              |     A:273–750      |             478 |      88.20 | –                                       |
+| `HIV1RT_3DLK.pdb`                                  | HIV-1 reverse transcriptase                    | Protein chain B retained from the experimental structure                                            |      B:6–428       |             409 |        N/A | \[[15](#ref-bauman2008crystal)\]        |
+| `nonLTR_RT_8gh6_1_924.pdb`                         | *Bombyx mori* R2 non-LTR reverse transcriptase | Protein chain A retained from the experimental structure; bound RNA and DNA chains were removed     |     A:111–924      |             715 |        N/A | \[[16](#ref-wilkinson2023structure)\]   |
+| `PlAMV_RdRp_q07518_895_1385.pdb`                   | PlAMV RdRp                                     | C-terminal RdRp-containing region extracted from the replication protein                            |     A:895–1385     |             491 |      85.61 | –                                       |
+| `PLrV_Polerovirus_P11623_relax_m4_p0_plddt-78.pdb` | PLrV replication protein                       | Complete submitted replication-protein sequence retained; no terminal trimming                      |      A:1–1062      |            1062 |      77.77 | –                                       |
+| `rymv_rdrp_1_464.pdb`                              | RYMV RdRp                                      | Complete submitted RdRp sequence retained; no terminal trimming                                     |      A:1–464       |             464 |      93.93 | –                                       |
+| `tcv_rdrp_relax_m1_p0_plddt-92.pdb`                | TCV RdRp                                       | Complete submitted RdRp sequence retained; no terminal trimming                                     |      A:1–524       |             524 |      92.56 | –                                       |
+| `tmv_rdrp_1117_relax_m3_p0_plddt-91.pdb`           | TMV RdRp                                       | C-terminal RdRp region beginning at source residue 1117 extracted and renumbered from 1 in the PDB  |      A:1–499       |             499 |      91.20 | –                                       |
+| `trov_p2ab_428.pdb`                                | TRoV P2ab                                      | N-terminal region removed to retain the mature RdRp-containing product                              |     A:428–874      |             447 |      91.61 | –                                       |
+| `trv_134k_1206_1707.pdb`                           | TRV 134K                                       | C-terminal RdRp-containing region extracted                                                         |    A:1206–1707     |             502 |      86.51 | –                                       |
+| `TuMV_NIb_m2_plddt-93.pdb`                         | TuMV NIb                                       | Mature NIb product extracted from the viral polyprotein and renumbered from 1                       |      A:1–517       |             517 |      93.20 | –                                       |
+| `TuYV_RdRP_p09507_relax_m1_p0_plddt-80.pdb`        | TuYV replication protein                       | Complete submitted replication-protein sequence retained; no terminal trimming                      |      A:1–1035      |            1035 |      80.63 | –                                       |
+| `tymv_206k_1298.pdb`                               | TyMV 206K                                      | N-terminal region removed to retain the C-terminal RdRp-containing region                           |    A:1298–1844     |             547 |      82.12 | –                                       |
+| `YoMV_RdRP_q66220_1120_1597.pdb`                   | YoMV RdRp                                      | C-terminal RdRp-containing region extracted from the replication protein                            |    A:1120–1597     |             478 |      88.25 | –                                       |
 
 ## Pairwise structural-alignment confidence and UPGMA clustering
 
 To provide quantitative support for the structure-based groupings
 obtained with DALI and Foldtree, all 17 structures in `RdRps/` were
 compared in an all-versus-all analysis with US-align v20260826
-\[[10](#ref-zhang2022usalign)\]. US-align performs sequence-independent
+\[[17](#ref-zhang2022usalign)\]. US-align performs sequence-independent
 monomeric structural alignment by maximizing TM-score. For every one of
 the 136 unique pairs, the analysis reports the RMSD over residues
 retained in the final structural alignment, aligned length, sequence
@@ -361,7 +362,7 @@ definitions.
 
 ### UPGMA clustering of the pairwise metrics
 
-UPGMA average-linkage clustering \[[11](#ref-sokal1958statistical)\] was
+UPGMA average-linkage clustering \[[18](#ref-sokal1958statistical)\] was
 performed independently with (i) aligned-residue RMSD as the distance
 and (ii) `1 -` average-length-normalized TM-score as the distance. The
 internal-node labels in the dendrograms are the arithmetic-mean linkage
@@ -477,18 +478,73 @@ stresses in arabidopsis thaliana. Plant Physiology. 2024;kiae581.
 
 </div>
 
+<div id="ref-kim2019graph" class="csl-entry">
+
+7\. Kim D, Paggi JM, Park C, Bennett C, Salzberg SL. Graph-based genome
+alignment and genotyping with HISAT2 and HISAT-genotype. Nature
+biotechnology. 2019;37:907–15.
+
+</div>
+
+<div id="ref-liao2014featurecounts" class="csl-entry">
+
+8\. Liao Y, Smyth GK, Shi W. featureCounts: An efficient general purpose
+program for assigning sequence reads to genomic features.
+Bioinformatics. 2014;30:923–30.
+
+</div>
+
+<div id="ref-love2014moderated" class="csl-entry">
+
+9\. Love MI, Huber W, Anders S. Moderated estimation of fold change and
+dispersion for RNA-seq data with DESeq2. Genome biology. 2014;15:550.
+
+</div>
+
+<div id="ref-jumper2021highly" class="csl-entry">
+
+10\. Jumper J, Evans R, Pritzel A, Green T, Figurnov M, Ronneberger O,
+et al. Highly accurate protein structure prediction with AlphaFold.
+nature. 2021;596:583–9.
+
+</div>
+
 <div id="ref-prabaharan2024structural" class="csl-entry">
 
-7\. Prabaharan C, Figiel M, Szczepanowski RH, Skowronek K, Zajko W,
+11\. Prabaharan C, Figiel M, Szczepanowski RH, Skowronek K, Zajko W,
 Thangaraj V, et al. Structural and biochemical characterization of
 cauliflower mosaic virus reverse transcriptase. Journal of Biological
 Chemistry. 2024;300:107555. <https://doi.org/10.1016/j.jbc.2024.107555>.
 
 </div>
 
+<div id="ref-wolf2018origins" class="csl-entry">
+
+12\. Wolf YI, Kazlauskas D, Iranzo J, Lucı́a-Sanz A, Kuhn JH, Krupovic M,
+et al. Origins and evolution of the global RNA virome. MBio.
+2018;9:10–1128.
+
+</div>
+
+<div id="ref-holm2022dali" class="csl-entry">
+
+13\. Holm L. Dali server: Structural unification of protein families.
+Nucleic acids research. 2022;50:W210–5.
+
+</div>
+
+<div id="ref-moi2025structural" class="csl-entry">
+
+14\. Moi D, Bernard C, Steinegger M, Nevers Y, Langleib M, Dessimoz C.
+Structural phylogenetics unravels the evolutionary diversification of
+communication systems in gram-positive bacteria and their viruses.
+Nature Structural & Molecular Biology. 2025;32:2492–502.
+
+</div>
+
 <div id="ref-bauman2008crystal" class="csl-entry">
 
-8\. Bauman JD, Das K, Ho WC, Baweja M, Himmel DM, Clark AD Jr., et al.
+15\. Bauman JD, Das K, Ho WC, Baweja M, Himmel DM, Clark AD Jr., et al.
 Crystal engineering of HIV-1 reverse transcriptase for structure-based
 drug design. Nucleic Acids Research. 2008;36:5083–92.
 <https://doi.org/10.1093/nar/gkn464>.
@@ -497,7 +553,7 @@ drug design. Nucleic Acids Research. 2008;36:5083–92.
 
 <div id="ref-wilkinson2023structure" class="csl-entry">
 
-9\. Wilkinson ME, Frangieh CJ, Macrae RK, Zhang F. Structure of the R2
+16\. Wilkinson ME, Frangieh CJ, Macrae RK, Zhang F. Structure of the R2
 non-LTR retrotransposon initiating target-primed reverse transcription.
 Science. 2023;380:301–8. <https://doi.org/10.1126/science.adg7883>.
 
@@ -505,7 +561,7 @@ Science. 2023;380:301–8. <https://doi.org/10.1126/science.adg7883>.
 
 <div id="ref-zhang2022usalign" class="csl-entry">
 
-10\. Zhang C, Shine M, Pyle AM, Zhang Y.
+17\. Zhang C, Shine M, Pyle AM, Zhang Y.
 <span class="nocase">US-align</span>: Universal structure alignments of
 proteins, nucleic acids, and macromolecular complexes. Nature Methods.
 2022;19:1109–15. <https://doi.org/10.1038/s41592-022-01585-1>.
@@ -514,9 +570,8 @@ proteins, nucleic acids, and macromolecular complexes. Nature Methods.
 
 <div id="ref-sokal1958statistical" class="csl-entry">
 
-11\. Sokal RR, Michener CD. A statistical method for evaluating
-systematic relationships. University of Kansas Science Bulletin.
-1958;38:1409–38.
+18\. Sokal RR, Michener CD, et al. A statistical method for evaluating
+systematic relationships. 1958.
 
 </div>
 
