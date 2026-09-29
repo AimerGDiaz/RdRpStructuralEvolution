@@ -1,0 +1,22 @@
+#!/bin/bash -l
+#SBATCH -A naiss2025-22-364
+#SBATCH -p main
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=250G
+#SBATCH -o %x.%j.log
+#SBATCH --error=%x.%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=aimerdiaz.evo@gmail.com
+
+
+# sbatch   --time=12:00:00   sra_download.sb  SRA_ids_remain.csv 
+module load sra-tools/3.1.1
+module load parallel/20230422
+
+cd /cfs/klemming/projects/supr/naiss2023-23-555/Data
+parallel -j 6 ' echo "downloading {} ";
+name=`grep {} SRA_ids_remain.csv | cut -d',' -f 3 `; 
+fastq-dump -I --gzip --split-files {} ;
+mv  {}"_1.fastq.gz" $name"_1.fastq.gz" ; 
+mv  {}"_2.fastq.gz" $name"_2.fastq.gz" ' ::: `grep -v Run $1 | cut -d',' -f 2 `
+

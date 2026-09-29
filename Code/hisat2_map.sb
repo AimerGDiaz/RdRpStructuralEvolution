@@ -1,0 +1,144 @@
+#!/bin/bash -l
+#SBATCH -A naiss2025-22-364
+#SBATCH -p main 
+#SBATCH --job-name mapping 
+#SBATCH --time=05:00:00
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=250G
+#SBATCH -o hisat2-%x.%j.log
+#SBATCH --error=hisat2-%x.%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=aimerdiaz.evo@gmail.com
+
+# for f in Chesnais_ Gao_ ; do sbatch hisat2_map.sb $f ; done
+module load samtools/1.20
+module load hisat2/2.2.1
+
+# hisat2-build Virome.fa Virome.fa 
+TAIR="/cfs/klemming/projects/supr/naiss2023-23-555/Data/Index/TAIR10_chr_all.fa"
+VIROME="/cfs/klemming/projects/supr/naiss2023-23-555/Data/Index/collection12.fa"
+TAIR_VIROME="/cfs/klemming/projects/supr/naiss2023-23-555/Data/Index/TAIR10_Viruses.fa"
+
+cd /cfs/klemming/projects/snic/naiss2023-23-555/Data/
+
+echo $HOSTNAME
+timestamp=$(date)
+echo "Starting Hisat2 at $timestamp"
+
+for file  in `ls "$1"*_1.fastq.gz`
+do
+name=`echo $file | awk -F '_1.fastq.gz' '{print $1}' `
+out=`echo $name | awk -F'_|-' '{print $1}'`
+vir=`echo $name | awk -F'_' '{gsub(/-.*/,"",$2);print $2}'`
+#Bera_TuMV  Chesnais_CaMV_TuYV  Clavel_TCV_TyMV  Gao_TCV  Gyula_TVCV_TuMV  Incarbone_TuMV  Jiang_ArLV1  Liu_CMV  Tong_CMV  Zorzatto_CaLCuV
+#for file  in `ls "$1"*_1.fastq.gz`; do name=`echo $file | awk -F '_1.fastq.gz' '{print $1}' `; out=`echo $name | awk -F'_|-' '{print $1}'` ; vir=`echo $name | awk -F'_' '{gsub(/-.*/,"",$2);print $2}'`; echo $name $out $vir; done
+
+	if [ "$out" == "Chesnais" ]
+	then 
+	out_dir="Chesnais_CaMV_TuYV"
+	layout="PE"
+	elif [ "$out" == "Gao" ]
+	then
+	out_dir="Gao_TCV"
+	layout="PE"
+	elif [ "$out" == "Bera" ]
+	then
+	out_dir="Bera_TuMV"
+	layout="SE"
+	elif [ "$out" == "Zorzatto" ]
+	then
+	out_dir="Zorzatto_CaLCuV"
+	layout="PE"
+	elif [ "$out" == "Gyula" ]
+	then
+	out_dir="Gyula_TVCV_TuMV"
+	layout="PE"
+	elif [ "$out" == "Liu" ]
+	then
+	out_dir="Liu_CMV"
+	layout="PE"               	
+	elif [ "$out" == "Clavel" ] 
+	then
+	out_dir="Clavel_TCV_TyMV"
+	layout="SE"
+	elif [ "$out" == "Jiang" ]
+	then
+	out_dir="Jiang_ArLV1"
+	layout="PE"
+	elif [ "$out" == "Incarbone" ]
+	then
+	out_dir="Incarbone_TuMV"
+	layout="SE"
+	fi
+#Bera_TuMV  Chesnais_CaMV  Gao_TCV  Gyula_TVCV  Tong_CMV  Zorzatto_CaLCuV
+
+echo Mapping $name to TAIR and $vir genomes in $out_dir project
+	if [ "$layout"  == "PE"  ]
+	then
+		if [ "$vir" == "Mock" ]
+		then
+samfiles=( Results/$out_dir/TAIR10/$name.sam Results/$out_dir/TAIR_Virus/$name.sam)
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $TAIR -1 "$name"_1.fastq.gz -2 "$name"_2.fastq.gz -S Results/$out_dir/TAIR10/$name.sam 2>  Results/$out_dir/TAIR10/$name.log
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $TAIR_VIROME -1 "$name"_1.fastq.gz -2 "$name"_2.fastq.gz -S Results/$out_dir/TAIR_Virus/$name.sam 2>  Results/$out_dir/TAIR_Virus/$name.log
+		else
+samfiles=( Results/$out_dir/TAIR10/$name.sam Results/$out_dir/$vir/$name.sam  Results/$out_dir/TAIR_Virus/$name.sam )
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $TAIR -1 "$name"_1.fastq.gz -2 "$name"_2.fastq.gz -S Results/$out_dir/TAIR10/$name.sam 2>  Results/$out_dir/TAIR10/$name.log
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $VIROME -1 "$name"_1.fastq.gz -2 "$name"_2.fastq.gz -S Results/$out_dir/$vir/$name.sam 2>  Results/$out_dir/$vir/$name.log 
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $TAIR_VIROME -1 "$name"_1.fastq.gz -2 "$name"_2.fastq.gz -S Results/$out_dir/TAIR_Virus/$name.sam 2>  Results/$out_dir/TAIR_Virus/$name.log
+		fi
+	else
+		if [ "$vir" == "Mock" ]
+		then
+samfiles=( Results/$out_dir/TAIR10/$name.sam Results/$out_dir/TAIR_Virus/$name.sam)
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $TAIR -U "$name"_1.fastq.gz -S Results/$out_dir/TAIR10/$name.sam 2>  Results/$out_dir/TAIR10/$name.log
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $TAIR_VIROME -U "$name"_1.fastq.gz  -S Results/$out_dir/TAIR_Virus/$name.sam 2>  Results/$out_dir/TAIR_Virus/$name.log
+		else
+samfiles=( Results/$out_dir/TAIR10/$name.sam Results/$out_dir/$vir/$name.sam  Results/$out_dir/TAIR_Virus/$name.sam )
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $VIROME -U "$name"_1.fastq.gz  -S Results/$out_dir/$vir/$name.sam 2>  Results/$out_dir/$vir/$name.log 
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $TAIR -U "$name"_1.fastq.gz  -S Results/$out_dir/TAIR10/$name.sam 2>  Results/$out_dir/TAIR10/$name.log
+hisat2 -p 6 --max-intronlen 5000 -k 1 --dta -x $TAIR_VIROME -U "$name"_1.fastq.gz  -S Results/$out_dir/TAIR_Virus/$name.sam 2>  Results/$out_dir/TAIR_Virus/$name.log
+		fi
+	fi	
+
+echo "Converting from sam to bam $name "
+
+	for sam in  ${samfiles[@]}  #"Results/$out_dir/TAIR10/$name.sam Results/$out_dir/$vir/$name.sam  Results/$out_dir/TAIR_Virus/$name.sam
+	do
+	folder=`echo $sam | awk -F'/' '{print $1"/"$2"/"$3}'`
+	name_sam=`echo $sam | awk -F'/|.sam' '{print $4}'`
+# Sorted by queryname
+	if [ "$layout"  == "PE"  ]
+	then
+	#Compatible file for featureCounts
+	samtools view -bS  $sam | samtools sort -n -o $folder/$name_sam.bam -
+	#Compatible file for Striengtie
+	samtools fixmate -m $folder/$name_sam.bam $folder/$name_sam.fixmate.bam
+	samtools sort  $folder/$name_sam.fixmate.bam -o  $folder/$name_sam.map.bam
+	#samtools index  $folder/$name_sam.map.bam
+	 echo "Duplicates removal " 	
+	samtools markdup -r $folder/$name_sam.map.bam $folder/$name_sam.dedup.bam
+	rm $folder/$name_sam.fixmate.bam  $folder/$name_sam.map.bam 
+	else
+	samtools view -bS  $sam | samtools sort -n -o $folder/$name_sam.bam -
+	#samtools index  $folder/$name_sam.bam
+	 echo "Duplicates removal " 	
+	samtools sort  $folder/$name_sam.bam | 	samtools markdup -r - $folder/$name_sam.dedup.bam 
+	fi
+	echo "Indexing final bam $name_sam" 
+	samtools index $folder/$name_sam.dedup.bam 
+	rm $sam  
+	done 
+
+done 
+
+
+timestamp=$(date)
+echo "Finishing Hisat2 at $timestamp"
+
+#Results/Chesnais_CaMV Results/Gao_TCV
+
+#-k <int> (default: 5) report up to <int> alns per read
+#--dta                              reports alignments tailored for transcript assemblers
+# --n-ceil <func>    func for max # non-A/C/G/Ts permitted in aln (L,0,0.15)
+
+#https://github.com/samtools/samtools/issues/765

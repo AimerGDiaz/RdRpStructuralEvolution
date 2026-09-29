@@ -1,0 +1,6 @@
+"sample","prefix","genotype","condition","replicate"
+"Clavel_Mock_Rep1","Clavel","WT","Mock",1
+"Clavel_Mock_Rep2","Clavel","WT","Mock",2
+"Clavel_TyMV_Rep1","Clavel","WT","TyMV",1
+"Clavel_TyMV_Rep2","Clavel","WT","TyMV",2
+"Clavel_TyMV_Rep3","Clavel","WT","TyMV",3

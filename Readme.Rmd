@@ -7,26 +7,334 @@ link-citations: true
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/biomed-central.csl
 ---
 
+```{r, include=FALSE}
+#BiocManager::install("ComplexHeatmap")
+library(ggplot2, quietly = T)
+library(reshape2, quietly = T)
+library(ComplexHeatmap)
+library( "RColorBrewer" , quietly = T)
+library(openxlsx, quietly = T)
+library(dplyr, quietly = T)
+library(tidyverse)
+library(patchwork)
+library(viridis)
+library(ggpubr)
+library("colorRamp2")
+library(openxlsx)
+
+mgsub <- function(pattern, replacement, x, ...) {
+  if (length(pattern)!=length(replacement)) {
+    stop("pattern and replacement do not have the same length.")
+  }
+  result <- x
+  for (i in 1:length(pattern)) {
+    result <- gsub(pattern[i], replacement[i], result, ...)
+  }
+  result
+}
+
+df_to_rmd_table <- function(df, digits = 2, p_digits = 3, p_col = "p.value", add_sig = TRUE,
+ sig_col = "sig", keep = NULL, rename = NULL, p_less_than = TRUE,  print_table = TRUE) {
+
+  df <- as.data.frame(df)
+
+  # keep only some columns (in order)
+  if (!is.null(keep)) {
+    df <- df[, keep, drop = FALSE]
+  }
+
+  # rename columns: named character vector c(old="New", ...)
+  if (!is.null(rename)) {
+    for (old in names(rename)) {
+      if (old %in% names(df)) names(df)[names(df) == old] <- rename[[old]]
+    }
+  }
+
+  # add significance codes (based on raw numeric p-values)
+  if (add_sig) {
+    if (!p_col %in% names(df)) stop("p_col not found in df: ", p_col)
+    if (!is.numeric(df[[p_col]])) {
+      # try to coerce (handles "0.0123" as character)
+      p_num <- suppressWarnings(as.numeric(df[[p_col]]))
+    } else {
+      p_num <- df[[p_col]]
+    }
+
+    sig <- ifelse(is.na(p_num), "",
+                  ifelse(p_num < 0.001, "***",
+                         ifelse(p_num < 0.01, "**",
+                                ifelse(p_num < 0.05, "*", "ns"))))
+
+    df[[sig_col]] <- sig
+  }
+
+  # format numeric columns
+  for (cn in names(df)) {
+    if (is.numeric(df[[cn]])) {
+      if (!is.null(p_col) && cn == p_col) {
+        # p-value formatting
+        thresh <- 10^-p_digits
+        if (p_less_than) {
+          df[[cn]] <- ifelse(df[[cn]] < thresh,
+                             paste0("<", formatC(thresh, format = "f", digits = p_digits)),
+                             formatC(df[[cn]], format = "f", digits = p_digits))
+        } else {
+          df[[cn]] <- formatC(df[[cn]], format = "f", digits = p_digits)
+        }
+      } else {
+        df[[cn]] <- formatC(df[[cn]], format = "f", digits = digits)
+      }
+    }
+  }
+
+  # escape pipes in character cells
+  for (cn in names(df)) {
+    if (is.character(df[[cn]])) {
+      df[[cn]] <- gsub("\\|", "\\\\|", df[[cn]])
+    }
+  }
+
+  # build pipe table
+  header <- paste0("| ", paste(names(df), collapse = " | "), " |")
+  align  <- paste0("| ", paste(rep("---", ncol(df)), collapse = " | "), " |")
+  body <- apply(df, 1, function(row) paste0("| ", paste(row, collapse = " | "), " |"))
+
+  md <- paste(c(header, align, body), collapse = "\n")
+
+  if (print_table) cat(md, "\n")
+  invisible(md)
+}
+```
+
 **affiliations**: Department of Plant Biology, Uppsala BioCenter, Swedish University of Agricultural Sciences and Linnean Center for Plant Biology, Box 7080, 75007 Uppsala, Sweden.
 
 \***correspondence**: anders.hafren@slu.se
 
 # Comparative viral transcriptomic analysis
 
-RNA-seq expression data for uninfected and infected Arabidopsis thaliana were obtained from NCBI Bioprojects: TuMV PRJNA788379 @gyula2022ecotype,  TuYV and CaMV PRJEB49403 @chesnais2022comparative,  TYMV PRJNA1103879 @clavel2024metabolic, TCV PRJNA336058 @wu2016analyses, CMV PRJNA1124548 @liu2025mutually and ArLV1 PRJNA863409 @jiang2024deciphering. Read processing, alignment, and gene-level quantification was addressed by mapping with HISAT2 v2.2.1 (Kim et al., 2019) to TAIR10 reference genome and quantifying with featureCounts (Liao et al., 2014). Differential expression was computed separately within each using DESeq2 DEGs were calculated using Deseq2 (Love et al., 2014).
+RNA-seq expression data for uninfected and infected Arabidopsis thaliana were obtained from NCBI Bioprojects: TuMV PRJNA788379 @gyula2022ecotype,  TuYV and CaMV PRJEB49403 @chesnais2022comparative,  TYMV PRJNA1103879 @clavel2026selective, TCV PRJNA336058 @wu2016analyses, CMV PRJNA1124548 @liu2025mutually and ArLV1 PRJNA863409 @jiang2024deciphering. Read processing, alignment, and gene-level quantification was addressed by mapping with HISAT2 v2.2.1 (Kim et al., 2019) to TAIR10 reference genome and quantifying with featureCounts (Liao et al., 2014). Differential expression was computed separately within each using DESeq2 DEGs were calculated using Deseq2 (Love et al., 2014).
 
 ## Libraries re-mapped 
 
-Virus | Project | Libraries | SeqType |Tissue | Ecotype | Genotypes | dpi | Paper | Reference
-:---: | :---:  | :---: | :---: | :---: | :---: | :---:  | :---:  | :---:  | :---: 
-ArLV1 |  PRJNA863409 | 7 (58) | Paired-End | Leaves |Col-0 | WT| 4% vs 80% infestation | [10.1093/plphys/kiae581](https://academic.oup.com/plphys/advance-article/doi/10.1093/plphys/kiae581/7849673) | @jiang2024deciphering
-TuYV | PRJEB49403  |  3 | Paired-End |Rosette | Col-0 | WT aphid Mp | 14dold, 21dpi | 10.1128/spectrum.00136-22 | @chesnais2022comparative
-TYMV |  PRJNA1103879 | 8 (16) | Single-End | Rosette | Col-0 | WT and atg2| 12dpi | [10.1101/2024.05.06.590709](https://doi.org/10.1101/2024.05.06.590709)   | @clavel2024metabolic 
-CaMV | PRJEB49403  |  6 | Paired-End | Rosette | Col-0 | WT aphid Mp | 14dold, 21dpi | 10.1128/spectrum.00136-22  |  @chesnais2022comparative
-TCV |  PRJNA1103879 | 8 (16) | Single-End | Rosette | Col-0 | WT and atg2| 12dpi | [10.1101/2024.05.06.590709](https://doi.org/10.1101/2024.05.06.590709)   | @clavel2024metabolic 
-TuMV | PRJNA788379 | 8 | Paired-End |Rosette | Col-0 and Bar-0 | Wt | 28dold, 14dpi | 10.1371/journal.pone.0275588 | @gyula2022ecotype 
-CMV | PRJNA1124548 | 6 |Paired-End | Rosette | Col-0 | WT, CMV and CMV-Δ2b  | 14dpi | [10.1038/s41467-025-65355-1](https://www.nature.com/articles/s41467-025-65355-1#Abs1) | @liu2025mutually 
+Virus | Project | Libraries | SeqType |Tissue | Ecotype | Genotypes | dpi | SRRs | Paper | Reference 
+:---: | :---:  | :---: | :---: | :---: | :---: | :---:  | :---:  | :---:  | :---:  | :---: 
+CaMV | PRJEB49403  |  6 | Paired-End | Rosette | Col-0 | WT aphid Mp | 14dold, 21dpi | ERR7738945, ERR7738946, ERR7738947, ERR7738939, ERR7738940, ERR7738941 | 10.1128/spectrum.00136-22  |  @chesnais2022comparative
+TuYV | PRJEB49403  |  3 | Paired-End |Rosette | Col-0 | WT aphid Mp | 14dold, 21dpi | ERR7738939, ERR7738940, ERR7738941, ERR7738942, ERR7738943, ERR7738944 | 10.1128/spectrum.00136-22 | @chesnais2022comparative
+TuMV | PRJNA788379 | 8 | Paired-End |Rosette | Col-0 and Bar-0 | Wt | 28dold, 14dpi | SRR17227570, SRR17227569, SRR17227568, SRR17227567, SRR17227565, SRR17227564, SRR17227563, SRR17227562 | 10.1371/journal.pone.0275588 | @gyula2022ecotype 
+TCV | PRJNA336058  | 6 (12) | Paired-End | Leaves | Col- | WT and dcl1-/-  | 28dold, 8dpi | SRR3992506, SRR3992507, SRR3992508, SRR3992509, SRR3992510, SRR3992511 | 10.1038/srep36007.  | @wu2016analyses
+CMV | PRJNA1124548 | 6 |Paired-End | Rosette | Col-0 | WT, CMV and CMV-Δ2b  | 14dpi | SRR29428980, SRR29428985, SRR29428982, SRR29428983 | [10.1038/s41467-025-65355-1](https://www.nature.com/articles/s41467-025-65355-1#Abs1) | @liu2025mutually 
+TYMV | PRJNA1103879 | 8 (16) | Single-End | Rosette | Col-0 | WT and atg2| 12dpi | SRR28785882, SRR28785883, SRR28785876, SRR28785877, SRR28785878 | [10.1101/2024.05.06.590709](https://doi.org/10.1101/2024.05.06.590709)   | @clavel2026selective 
+ArLV1 | PRJNA863409 | 7 (58) | Paired-End | Leaves | Col-0 | WT | 4% vs 80% infestation  | SRR20705605, SRR20705604, SRR20705602, SRR20705607, SRR20705606, SRR20705603 | [10.1093/plphys/kiae581](https://academic.oup.com/plphys/advance-article/doi/10.1093/plphys/kiae581/7849673) | @jiang2024deciphering
 
+## From FeatureCouns 
+
+```{bash, eval=F}
+ Rscript Code/deseqDEG.R FeatureCounts/Liu_CMV_fcounts.txt "WTvsWT" "CMVvsMock"
+
+ Rscript Code/deseqDEG.R FeatureCounts/Gyula_TVCV_TuMV_fcounts.txt "WTvsWT" "TuMVvsMock"
+
+ Rscript Code/deseqDEG.R FeatureCounts/Gao_TCV_fcounts.txt  "WTvsWT" "TCVvsMock"
+ 
+ Rscript Code/deseqDEG.R FeatureCounts/Chesnais_CaMV_TuYV_fcounts.txt  "WTvsWT" "CaMVvsMock"
+ 
+ Rscript Code/deseqDEG.R FeatureCounts/Chesnais_CaMV_TuYV_fcounts.txt  "WTvsWT" "TuYVvsMock"
+ 
+ Rscript Code/deseqDEG.R FeatureCounts/Clavel_TYMV_fcounts.txt  "WTvsWT" "TYMVvsMock"
+ 
+ Rscript Code/deseqDEG.R FeatureCounts/Jiang_ArLV1_mArR1fcounts.txt "WTvsWT" "ArLV1vsMock"
+```
+
+## Gene selection 
+
+```{bash, eval=F}
+(cat Data/deseq_head.txt && for gene in `cat Data/PRs_genes.csv | cut -f 1` ; do grep $gene FeatureCounts/*DESeq2*; done  )  > Data/PRs_Deseq2.txt
+```
+
+## PRs genes expression
+
+::: {style="text-align: center;"}
+<figure>
+```{=html}
+<img src="Figures/CompTranscriptome_PRs_sig.svg" style="width: 100%;
+height: 100%"/>
+```
+<figcaption style="margin-top: 10px;">
+
+<strong>Heatmap PRs related genes transcriptionally induce/repress by 7 different viruses</strong>
+</figcaption>
+</figure>
+<a name="CompTranscriptome_PRs_sig.svg"></a>
+:::
+
+
+```{r, eval=FALSE}
+DeseqOut <- read.delim("Data/PRs_Deseq2.txt", check.names = FALSE)
+GeneNames <-  read.delim("Data/PRs_genes.csv", header = F)
+
+colnames(GeneNames) <- c("gene","gene_name")
+
+DeseqOut_clean <- DeseqOut %>%
+  mutate(id = .[[1]]) %>%         
+  select(-1) %>%
+  separate(id, into = c("file", "gene"), sep = ":", extra = "merge", fill = "right") %>%
+  mutate(
+    file = basename(file),
+    file = str_remove(file, "\\.tsv$"),
+    Project = str_extract(file, "^[^_]+"),
+    Condition =  gsub(".*_","",file),  
+    Virus = str_match(file, "DESeq2_([^_]+)_vs_")[,2],
+    sig = case_when(
+      !is.na(padj) & padj < 0.001 ~ "***",
+      !is.na(padj) & padj < 0.01  ~ "**",
+      !is.na(padj) & padj < 0.05  ~ "*",
+      TRUE ~ "ns"
+    )
+  )
+
+DeseqOut_clean <- merge(GeneNames,DeseqOut_clean, by.x = "gene" )
+
+```
+
+### Heatmap from Deseq2
+```{r, eval=FALSE}
+
+DeseqOut_clean$ColKey <- DeseqOut_clean$Virus
+
+log2fc_mat <- xtabs(log2FoldChange ~ gene_name + ColKey, data = DeseqOut_clean)
+log2fc_mat <- as.matrix(log2fc_mat)
+
+# helper for significance stars: take first non-empty star, else ""
+first_star <- function(x) {
+  x <- x[!is.na(x)]
+  x <- x[x != ""]
+  x <- x[!x %in% c("ns","NS","n.s.","N.S.","NA")]
+  if (length(x) == 0) return("")
+  x[1]
+}
+
+
+sig_mat <- tapply(DeseqOut_clean$sig,
+                  list(DeseqOut_clean$gene_name, DeseqOut_clean$ColKey),
+                  first_star)
+
+
+# ---- colors for unscaled log2FC ----
+mx <- max(abs(log2fc_mat), na.rm = TRUE)
+col_fun <- colorRamp2(c(-mx, 0, mx), c("#2b8cbe", "white", "#de2d26"))
+# ---- draw heatmap with stars overlaid on cells ----
+
+colOrder <- c( "ArLV1","TuYV","TYMV","CaMV","TCV","TuMV","CMV")
+
+sig_mat <- sig_mat[rowOrder,]
+
+ht <- Heatmap(
+  log2fc_mat,
+  name = "log2FC",
+  col = col_fun,
+  na_col = "grey90",
+  cluster_rows = F,
+  cluster_columns = F,
+  column_title = NULL, 
+  row_title = NULL, 
+  rect_gp = gpar(col = "grey80", lwd = 0.5),
+  #  stars on top of each cell
+  cell_fun = function(j, i, x, y, w, h, fill) {
+    s <- sig_mat[i, j]
+    if (!is.na(s) && nzchar(s)) {
+      grid.text(s, x, y, gp = gpar(fontsize = 12, col = "black"))
+    }
+  }
+)
+
+svg(filename = "Figures/CompTranscriptome_PRs_sig.svg",   width = 4, height = 4)
+ht
+dev.off()
+
+pdf(file = "Figures/CompTranscriptome_PRs_sig.pdf",   width = 4, height = 4)
+ht
+dev.off()
+
+```
+
+## Single gene bar plot
+
+::: {style="text-align: center;"}
+<figure>
+```{=html}
+<img src="Figures/PR1_plot.svg" style="width: 100%;
+height: 100%"/>
+```
+<figcaption style="margin-top: 10px;">
+
+<strong> PR1 expression log2FC ± lfcSE\n relative to Mock in 7 different viruses</strong>
+</figcaption>
+</figure>
+<a name="PR1_plot.svg"></a>
+:::
+
+```{r, eval=FALSE}
+DeseqOut_clean$Virus <- factor(DeseqOut_clean$Virus, levels = c("ArLV1","TuYV","TYMV","CaMV","TCV","TuMV","CMV"))
+
+viral_gradient <-  c("Mock" ="#FA9EB4","TuYV" = "#fecf92","ArLV1" = "#feff92","TRoV" = "#641a80","CMV" = "#F768A1" ,"CaMV" ="#DD3497", "TYMV" = "#AE017E" ,"TCV" ="#b73779" ,"TuMV" = "#7A0177" )
+
+PR1_plot <- ggplot(DeseqOut_clean[DeseqOut_clean$gene == "AT2G14610",], aes(x = Virus, y = log2FoldChange, fill = Virus)) +
+  geom_col(width = 0.7) +
+  geom_errorbar(aes(ymin = log2FoldChange - lfcSE, ymax = log2FoldChange + lfcSE),
+                width = 0.2, linewidth = 0.6) +
+  geom_text(aes(label = sig), position = position_dodge(width = 0.6),
+            vjust = -0.8, size = 10, show.legend = FALSE) +
+ scale_fill_manual(values = viral_gradient) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.10))) +
+#  facet_wrap(~ gene, scales = "free_y") +
+  theme_bw( base_size = 30, base_family = "Helvetica")  +theme( legend.position = "none") +
+  labs(x = NULL, y = "PR1 log2FC\n Relative to Mock")  
+
+ggsave(PR1_plot, device = pdf, filename = "Figures/PR1_plot.pdf",  width=9, height=7.5)
+
+PRs <- DeseqOut_clean[grepl( "AT2G14610|AT3G57260|AT1G75040", DeseqOut_clean$gene),-9]
+
+out_list <- list(
+  Deseq2Transcriptome = PRs
+) 
+
+ggsave(PR1_plot, device = svg, filename = "Figures/PR1_plot.svg",  width=9, height=7.5)
+ggsave(PR1_plot, device = pdf, filename = "Figures/PR1_plot.pdf", width=9, height=7.5)
+
+
+write.xlsx(out_list, file = "Results/SupTable5.PRs_comp_transcriptomics.xlsx", overwrite = TRUE)
+
+PRs_plot <- ggplot(DeseqOut_clean[grepl( "AT3G57260|AT1G75040",DeseqOut_clean$gene ),], 
+                   aes(x = Virus, y = log2FoldChange, fill = Virus)) +
+  geom_col(width = 0.7) +
+  geom_errorbar(aes(ymin = log2FoldChange - lfcSE, ymax = log2FoldChange + lfcSE),
+                width = 0.2, linewidth = 0.6) +
+  geom_text(aes(label = sig), position = position_dodge(width = 0.6),
+            vjust = -0.8, size = 10, show.legend = FALSE) +
+  scale_fill_manual(values = viral_gradient) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.25))) +
+ facet_grid(.~gene_name ) +
+  theme_bw( base_size = 30, base_family = "Helvetica") + 
+  labs(x = NULL, y = "log2FC ± lfcSE\n Relative to Mock")  +
+theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),legend.position = "none") 
+
+ggsave(PRs_plot, device = pdf, filename = "Figures/PR2_5_plot.pdf",  width=12, height=8)
+ggsave(PRs_plot, device = svg, filename = "Figures/PR2_5_plot.svg",  width=12, height=8)
+
+```
+
+::: {style="text-align: center;"}
+<figure>
+```{=html}
+<img src="Figures/PR2_5_plot.svg" style="width: 100%;
+height: 100%"/>
+```
+<figcaption style="margin-top: 10px;">
+
+<strong> PR2 and PR5 expression log2FC ± lfcSE\n relative to Mock in 7 different viruses</strong>
+</figcaption>
+</figure>
+<a name="PR2_5_plot.svg"></a>
+:::
 
 # Viral RdRps structural prediction and phylogenetics
 

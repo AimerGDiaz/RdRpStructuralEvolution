@@ -1,0 +1,73 @@
+#!/bin/bash -l
+#SBATCH -A naiss2025-22-364
+#SBATCH -p main
+#SBATCH --job-name mapping 
+#SBATCH --time=24:00:00
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=250G
+#SBATCH -o featureC-%x.%j.log
+#SBATCH --error=featureC-%x.%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=aimerdiaz.evo@gmail.com
+
+
+TAIR="/cfs/klemming/projects/supr/naiss2023-23-555/Data/Index/TAIR10_GFF3_genes_transposons.gff"
+VIROME="/cfs/klemming/projects/supr/naiss2023-23-555/Data/Index/collection12_cor_sort.gff "
+TAIR_VIROME="/cfs/klemming/projects/supr/naiss2023-23-555/Data/Index/TAIR10_Viruses_Sort.gff"
+module load bioinfo-tools subread/2.0.0
+ #featureCounts --donotsort  -T 15 -p -t exon  -g gene_id -a AraDBindex/TAIR10_GFF3_genes_transposo  -o "counts"$out"raw_gene.txt" --fraction -R -J  -M  -O --largestOverlap $bam
+#        par="-t exon"
+#         out2="gene.txt"
+#         feat="gene_id"
+cd /cfs/klemming/projects/snic/naiss2023-23-555/Data/Results 
+
+ echo $HOSTNAME
+ timestamp=$(date)
+echo $HOSTNAME
+timestamp=$(date)
+echo "Starting Hisat2 at $timestamp"
+
+for out  in `ls "$1"*_1.fastq.gz` 
+do
+	if [ "$out" == "Chesnais" ]
+	then 
+	out_dir="Chesnais_CaMV_TuYV"
+	layout="PE"
+	elif [ "$out" == "Gao" ]
+	then
+	out_dir="Gao_TCV"
+	layout="PE"
+	elif [ "$out" == "Bera" ]
+	then
+	out_dir="Bera_TuMV"
+	layout="SE"
+	elif [ "$out" == "Zorzatto" ]
+	then
+	out_dir="Zorzatto_CaLCuV"
+	layout="PE"
+	elif [ "$out" == "Gyula" ]
+	then
+	out_dir="Gyula_TVCV_TuMV"
+	layout="PE"
+	elif [ "$out" == "Liu" ]
+	then
+	out_dir="Liu_CMV"
+	layout="PE"               	
+	elif [ "$out" == "Clavel" ] 
+	then
+	out_dir="Clavel_TCV_TyMV"
+	layout="SE"
+	elif [ "$out" == "Jiang" ]
+	then
+	out_dir="Jiang_ArLV1"
+	layout="PE"
+	elif [ "$out" == "Incarbone" ]
+	then
+	out_dir="Incarbone_TuMV"
+	layout="SE"
+	fi
+	
+
+featureCounts --donotsort  -T 15 -p -t exon  -g Parent -a  AraDBindex/TAIR10_GFF3_genes_transposons.gff -o gene4.out --fraction -J -M -O --largestOverlap 
+
+done
