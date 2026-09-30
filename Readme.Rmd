@@ -1,5 +1,5 @@
 ---
-title: "RNA silencing safeguards plant fertility during viral infection and decreases Turnip rosette virus vertical transmission"
+title: "RNA silencing safeguards plant fertility during viral infection and decreases turnip rosette virus vertical transmission"
 author: "Aimer Gutiérrez-Díaz, Sanjana Holla, Inês Moura and Anders Hafrén\\*"
 output: github_document
 bibliography: References.bib
@@ -109,6 +109,22 @@ df_to_rmd_table <- function(df, digits = 2, p_digits = 3, p_col = "p.value", add
 **affiliations**: Department of Plant Biology, Uppsala BioCenter, Swedish University of Agricultural Sciences and Linnean Center for Plant Biology, Box 7080, 75007 Uppsala, Sweden.
 
 \***correspondence**: anders.hafren@slu.se
+
+## Contents
+
+- [Comparative viral transcriptomic analysis](#comparative-viral-transcriptomic-analysis)
+  - [Libraries re-mapped](#libraries-re-mapped)
+  - [From FeatureCouns](#from-featurecouns)
+  - [Gene selection](#gene-selection)
+  - [PRs genes expression](#prs-genes-expression)
+  - [Heatmap from Deseq2](#heatmap-from-deseq2)
+  - [Single gene bar plot](#single-gene-bar-plot)
+- [Viral RdRps structural prediction and phylogenetics](#viral-rdrps-structural-prediction-and-phylogenetics)
+  - [PDB sequence post-processing](#pdb-sequence-post-processing)
+  - [Pairwise structural-alignment confidence and UPGMA clustering](#pairwise-structural-alignment-confidence-and-upgma-clustering)
+  - [UPGMA clustering of the pairwise metrics](#upgma-clustering-of-the-pairwise-metrics)
+  - [Representative RYMV--TRoV alignment](#representative-rymvtrov-alignment)
+- [References](#references)
 
 # Comparative viral transcriptomic analysis
 
@@ -342,7 +358,7 @@ Protein sequences corresponding to CMV 2a, TRV 134K, TyMV 206K, TRoV P2ab, ALV1 
 
 ## PDB sequence post-processing
 
-The sequence or chain selection applied to each structure in `RdRps/` is summarized below. The repository contains the final PDB files but no separate processing manifest; therefore, this table reports the post-processing recoverable from filenames and coordinate records and does not infer unrecorded substitutions. Residue ranges follow the numbering stored in each PDB file. "Residues in PDB" counts residues with `ATOM` records; consequently, experimentally determined structures can contain fewer coordinate-bearing residues than the retained sequence span because unresolved residues are absent. Mean pLDDT was recalculated for AlphaFold2 models as the arithmetic mean of the C$\alpha$-atom B-factor field, using one value per residue. For experimental structures, this field contains experimental B-factors or related quality values rather than pLDDT and is therefore reported as not applicable (N/A).
+The sequence or chain selection applied to each structure in `RdRps/` is summarized below. Residue ranges follow the numbering stored in each PDB file. "Residues in PDB" counts residues with `ATOM` records; consequently, experimentally determined structures can contain fewer coordinate-bearing residues than the retained sequence span because unresolved residues are absent. Mean pLDDT was recalculated for AlphaFold2 models as the arithmetic mean of the C$\alpha$-atom B-factor field, using one value per residue. For experimental structures, this field contains experimental B-factors or related quality values rather than pLDDT and is therefore reported as not applicable (N/A).
 
 | PDB file | Protein or construct | Sequence post-processing | Retained PDB range | Residues in PDB | Mean pLDDT | Published-structure citation |
 |:--|:--|:--|:--:|--:|--:|:--|
@@ -350,7 +366,6 @@ The sequence or chain selection applied to each structure in `RdRps/` is summari
 | `alv1_p1_1140_1610.pdb` | ALV1 P1 | N-terminal region removed to retain the C-terminal RdRp region; the stored endpoint is residue 1610 | A:1140--1610 | 471 | 87.78 | -- |
 | `CaMV_P5_8R0S.pdb` | CaMV P5 reverse transcriptase | Protein chain A retained from the experimental structure; bound nucleic-acid chains were removed | A:1--475 | 470 | N/A | @prabaharan2024structural |
 | `CMV_2a_273-750.pdb` | CMV 2a | Internal RdRp-containing region extracted from the replication protein | A:273--750 | 478 | 88.20 | -- |
-| `HIV1RT_3DLK.pdb` | HIV-1 reverse transcriptase | Protein chain B retained from the experimental structure | B:6--428 | 409 | N/A | @bauman2008crystal |
 | `nonLTR_RT_8gh6_1_924.pdb` | *Bombyx mori* R2 non-LTR reverse transcriptase | Protein chain A retained from the experimental structure; bound RNA and DNA chains were removed | A:111--924 | 715 | N/A | @wilkinson2023structure |
 | `PlAMV_RdRp_q07518_895_1385.pdb` | PlAMV RdRp | C-terminal RdRp-containing region extracted from the replication protein | A:895--1385 | 491 | 85.61 | -- |
 | `PLrV_Polerovirus_P11623_relax_m4_p0_plddt-78.pdb` | PLrV replication protein | Complete submitted replication-protein sequence retained; no terminal trimming | A:1--1062 | 1062 | 77.77 | -- |
@@ -366,17 +381,17 @@ The sequence or chain selection applied to each structure in `RdRps/` is summari
 
 ## Pairwise structural-alignment confidence and UPGMA clustering
 
-To provide quantitative support for the structure-based groupings obtained with DALI and Foldtree, all 17 structures in `RdRps/` were compared in an all-versus-all analysis with US-align v20260826 [@zhang2022usalign]. US-align performs sequence-independent monomeric structural alignment by maximizing TM-score. For every one of the 136 unique pairs, the analysis reports the RMSD over residues retained in the final structural alignment, aligned length, sequence identity, coverage, and TM-scores normalized independently by the length of each structure. Because length-specific TM-scores are directional, the symmetric TM-score matrix below uses the score normalized by the average length of the two structures (`-a T`); both directional scores remain available in the tidy results file.
+To provide quantitative support for the structure-based groupings obtained with DALI and Foldtree, all 16 structures in `RdRps/` were compared in an all-versus-all analysis with US-align v20260826 [@zhang2022usalign]. US-align performs sequence-independent monomeric structural alignment by maximizing TM-score. For every one of the 120 unique pairs, the analysis reports the RMSD over residues retained in the final structural alignment, aligned length, sequence identity, coverage, and TM-scores normalized independently by the length of each structure. Because length-specific TM-scores are directional, the symmetric TM-score matrix below uses the score normalized by the average length of the two structures (`-a T`); both directional scores remain available in the tidy results file.
 
 TM-score ranges from 0 to 1, and values of at least approximately 0.5 generally indicate the same global protein fold. RMSD is sensitive to the number of aligned residues and was therefore interpreted jointly with TM-score and alignment coverage. These metrics provide an independent, quantitative check of the structural-similarity signal underlying the DALI/Foldtree topology; they are descriptive alignment measures rather than bootstrap or branch-support probabilities.
 
 | Summary statistic | Value |
 |:--|--:|
-| Structures | 17 |
-| Unique pairwise alignments | 136 |
-| RMSD, minimum / median / maximum | 0.69 / 4.16 / 6.60 Å |
-| Average-length-normalized TM-score, minimum / median / maximum | 0.229 / 0.549 / 0.971 |
-| Pairs with TM-score >= 0.5 | 75/136 (55.1%) |
+| Structures | 16 |
+| Unique pairwise alignments | 120 |
+| RMSD, minimum / median / maximum | 0.69 / 4.13 / 5.55 Å |
+| Average-length-normalized TM-score, minimum / median / maximum | 0.266 / 0.594 / 0.971 |
+| Pairs with TM-score >= 0.5 | 75/120 (62.5%) |
 
 The closest structural pairs illustrate that the high-similarity signal is not restricted to a single example. TMV--YoMV had the highest average-length-normalized TM-score (0.971; RMSD 0.69 Å across 478 aligned residues), followed by RYMV--TRoV (0.953; 1.32 Å across 445 residues), TRV--YoMV (0.937; 1.52 Å across 475 residues), and CMV--YoMV (0.921; 2.20 Å across 468 residues).
 

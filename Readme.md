@@ -1,5 +1,5 @@
 RNA silencing safeguards plant fertility during viral infection and
-decreases Turnip rosette virus vertical transmission
+decreases turnip rosette virus vertical transmission
 ================
 Aimer Gutiérrez-Díaz, Sanjana Holla, Inês Moura and Anders Hafrén\*
 
@@ -8,6 +8,27 @@ Swedish University of Agricultural Sciences and Linnean Center for Plant
 Biology, Box 7080, 75007 Uppsala, Sweden.
 
 \***correspondence**: <anders.hafren@slu.se>
+
+## Contents
+
+- [Comparative viral transcriptomic
+  analysis](#comparative-viral-transcriptomic-analysis)
+  - [Libraries re-mapped](#libraries-re-mapped)
+  - [From FeatureCouns](#from-featurecouns)
+  - [Gene selection](#gene-selection)
+  - [PRs genes expression](#prs-genes-expression)
+  - [Heatmap from Deseq2](#heatmap-from-deseq2)
+  - [Single gene bar plot](#single-gene-bar-plot)
+- [Viral RdRps structural prediction and
+  phylogenetics](#viral-rdrps-structural-prediction-and-phylogenetics)
+  - [PDB sequence post-processing](#pdb-sequence-post-processing)
+  - [Pairwise structural-alignment confidence and UPGMA
+    clustering](#pairwise-structural-alignment-confidence-and-upgma-clustering)
+  - [UPGMA clustering of the pairwise
+    metrics](#upgma-clustering-of-the-pairwise-metrics)
+  - [Representative RYMV–TRoV
+    alignment](#representative-rymvtrov-alignment)
+- [References](#references)
 
 # Comparative viral transcriptomic analysis
 
@@ -270,19 +291,15 @@ supported by both approaches.
 ## PDB sequence post-processing
 
 The sequence or chain selection applied to each structure in `RdRps/` is
-summarized below. The repository contains the final PDB files but no
-separate processing manifest; therefore, this table reports the
-post-processing recoverable from filenames and coordinate records and
-does not infer unrecorded substitutions. Residue ranges follow the
-numbering stored in each PDB file. “Residues in PDB” counts residues
-with `ATOM` records; consequently, experimentally determined structures
-can contain fewer coordinate-bearing residues than the retained sequence
-span because unresolved residues are absent. Mean pLDDT was recalculated
-for AlphaFold2 models as the arithmetic mean of the C$\alpha$-atom
-B-factor field, using one value per residue. For experimental
-structures, this field contains experimental B-factors or related
-quality values rather than pLDDT and is therefore reported as not
-applicable (N/A).
+summarized below. Residue ranges follow the numbering stored in each PDB
+file. “Residues in PDB” counts residues with `ATOM` records;
+consequently, experimentally determined structures can contain fewer
+coordinate-bearing residues than the retained sequence span because
+unresolved residues are absent. Mean pLDDT was recalculated for
+AlphaFold2 models as the arithmetic mean of the C$\alpha$-atom B-factor
+field, using one value per residue. For experimental structures, this
+field contains experimental B-factors or related quality values rather
+than pLDDT and is therefore reported as not applicable (N/A).
 
 | PDB file                                           | Protein or construct                           | Sequence post-processing                                                                            | Retained PDB range | Residues in PDB | Mean pLDDT | Published-structure citation            |
 |:---------------------------------------------------|:-----------------------------------------------|:----------------------------------------------------------------------------------------------------|:------------------:|----------------:|-----------:|:----------------------------------------|
@@ -290,8 +307,7 @@ applicable (N/A).
 | `alv1_p1_1140_1610.pdb`                            | ALV1 P1                                        | N-terminal region removed to retain the C-terminal RdRp region; the stored endpoint is residue 1610 |    A:1140–1610     |             471 |      87.78 | –                                       |
 | `CaMV_P5_8R0S.pdb`                                 | CaMV P5 reverse transcriptase                  | Protein chain A retained from the experimental structure; bound nucleic-acid chains were removed    |      A:1–475       |             470 |        N/A | \[[11](#ref-prabaharan2024structural)\] |
 | `CMV_2a_273-750.pdb`                               | CMV 2a                                         | Internal RdRp-containing region extracted from the replication protein                              |     A:273–750      |             478 |      88.20 | –                                       |
-| `HIV1RT_3DLK.pdb`                                  | HIV-1 reverse transcriptase                    | Protein chain B retained from the experimental structure                                            |      B:6–428       |             409 |        N/A | \[[15](#ref-bauman2008crystal)\]        |
-| `nonLTR_RT_8gh6_1_924.pdb`                         | *Bombyx mori* R2 non-LTR reverse transcriptase | Protein chain A retained from the experimental structure; bound RNA and DNA chains were removed     |     A:111–924      |             715 |        N/A | \[[16](#ref-wilkinson2023structure)\]   |
+| `nonLTR_RT_8gh6_1_924.pdb`                         | *Bombyx mori* R2 non-LTR reverse transcriptase | Protein chain A retained from the experimental structure; bound RNA and DNA chains were removed     |     A:111–924      |             715 |        N/A | \[[15](#ref-wilkinson2023structure)\]   |
 | `PlAMV_RdRp_q07518_895_1385.pdb`                   | PlAMV RdRp                                     | C-terminal RdRp-containing region extracted from the replication protein                            |     A:895–1385     |             491 |      85.61 | –                                       |
 | `PLrV_Polerovirus_P11623_relax_m4_p0_plddt-78.pdb` | PLrV replication protein                       | Complete submitted replication-protein sequence retained; no terminal trimming                      |      A:1–1062      |            1062 |      77.77 | –                                       |
 | `rymv_rdrp_1_464.pdb`                              | RYMV RdRp                                      | Complete submitted RdRp sequence retained; no terminal trimming                                     |      A:1–464       |             464 |      93.93 | –                                       |
@@ -307,11 +323,11 @@ applicable (N/A).
 ## Pairwise structural-alignment confidence and UPGMA clustering
 
 To provide quantitative support for the structure-based groupings
-obtained with DALI and Foldtree, all 17 structures in `RdRps/` were
+obtained with DALI and Foldtree, all 16 structures in `RdRps/` were
 compared in an all-versus-all analysis with US-align v20260826
-\[[17](#ref-zhang2022usalign)\]. US-align performs sequence-independent
+\[[16](#ref-zhang2022usalign)\]. US-align performs sequence-independent
 monomeric structural alignment by maximizing TM-score. For every one of
-the 136 unique pairs, the analysis reports the RMSD over residues
+the 120 unique pairs, the analysis reports the RMSD over residues
 retained in the final structural alignment, aligned length, sequence
 identity, coverage, and TM-scores normalized independently by the length
 of each structure. Because length-specific TM-scores are directional,
@@ -329,11 +345,11 @@ measures rather than bootstrap or branch-support probabilities.
 
 | Summary statistic                                              |                 Value |
 |:---------------------------------------------------------------|----------------------:|
-| Structures                                                     |                    17 |
-| Unique pairwise alignments                                     |                   136 |
-| RMSD, minimum / median / maximum                               |  0.69 / 4.16 / 6.60 Å |
-| Average-length-normalized TM-score, minimum / median / maximum | 0.229 / 0.549 / 0.971 |
-| Pairs with TM-score \>= 0.5                                    |        75/136 (55.1%) |
+| Structures                                                     |                    16 |
+| Unique pairwise alignments                                     |                   120 |
+| RMSD, minimum / median / maximum                               |  0.69 / 4.13 / 5.55 Å |
+| Average-length-normalized TM-score, minimum / median / maximum | 0.266 / 0.594 / 0.971 |
+| Pairs with TM-score \>= 0.5                                    |        75/120 (62.5%) |
 
 The closest structural pairs illustrate that the high-similarity signal
 is not restricted to a single example. TMV–YoMV had the highest
@@ -362,7 +378,7 @@ definitions.
 
 ### UPGMA clustering of the pairwise metrics
 
-UPGMA average-linkage clustering \[[18](#ref-sokal1958statistical)\] was
+UPGMA average-linkage clustering \[[17](#ref-sokal1958statistical)\] was
 performed independently with (i) aligned-residue RMSD as the distance
 and (ii) `1 -` average-length-normalized TM-score as the distance. The
 internal-node labels in the dendrograms are the arithmetic-mean linkage
@@ -542,18 +558,9 @@ Nature Structural & Molecular Biology. 2025;32:2492–502.
 
 </div>
 
-<div id="ref-bauman2008crystal" class="csl-entry">
-
-15\. Bauman JD, Das K, Ho WC, Baweja M, Himmel DM, Clark AD Jr., et al.
-Crystal engineering of HIV-1 reverse transcriptase for structure-based
-drug design. Nucleic Acids Research. 2008;36:5083–92.
-<https://doi.org/10.1093/nar/gkn464>.
-
-</div>
-
 <div id="ref-wilkinson2023structure" class="csl-entry">
 
-16\. Wilkinson ME, Frangieh CJ, Macrae RK, Zhang F. Structure of the R2
+15\. Wilkinson ME, Frangieh CJ, Macrae RK, Zhang F. Structure of the R2
 non-LTR retrotransposon initiating target-primed reverse transcription.
 Science. 2023;380:301–8. <https://doi.org/10.1126/science.adg7883>.
 
@@ -561,7 +568,7 @@ Science. 2023;380:301–8. <https://doi.org/10.1126/science.adg7883>.
 
 <div id="ref-zhang2022usalign" class="csl-entry">
 
-17\. Zhang C, Shine M, Pyle AM, Zhang Y.
+16\. Zhang C, Shine M, Pyle AM, Zhang Y.
 <span class="nocase">US-align</span>: Universal structure alignments of
 proteins, nucleic acids, and macromolecular complexes. Nature Methods.
 2022;19:1109–15. <https://doi.org/10.1038/s41592-022-01585-1>.
@@ -570,7 +577,7 @@ proteins, nucleic acids, and macromolecular complexes. Nature Methods.
 
 <div id="ref-sokal1958statistical" class="csl-entry">
 
-18\. Sokal RR, Michener CD, et al. A statistical method for evaluating
+17\. Sokal RR, Michener CD, et al. A statistical method for evaluating
 systematic relationships. 1958.
 
 </div>
