@@ -29,7 +29,6 @@ STRUCTURES = [
     ("ALV1", "alv1_p1_1140_1610.pdb"),
     ("CaMV", "CaMV_P5_8R0S.pdb"),
     ("CMV", "CMV_2a_273-750.pdb"),
-    ("HIV-1 RT", "HIV1RT_3DLK.pdb"),
     ("R2 RT", "nonLTR_RT_8gh6_1_924.pdb"),
     ("PlAMV", "PlAMV_RdRp_q07518_895_1385.pdb"),
     ("PLrV", "PLrV_Polerovirus_P11623_relax_m4_p0_plddt-78.pdb"),
@@ -244,7 +243,7 @@ def heatmap_svg(labels: list[str], rmsd: list[list[float]], tm: list[list[float]
               (238, 247, 255), (8, 48, 107), 1)
     panel_svg(left + panel + gap, tm, "TM-score (average-length normalized)", 0.0, 1.0,
               (255, 247, 236), (127, 39, 4), 2)
-    pieces.append(f'<text x="{width / 2}" y="{height - 22}" text-anchor="middle" class="axis">Diagonal values represent self-comparisons; all off-diagonal cells correspond to the 136 unique pairwise alignments.</text>')
+    pieces.append(f'<text x="{width / 2}" y="{height - 22}" text-anchor="middle" class="axis">Diagonal values represent self-comparisons; all off-diagonal cells correspond to the {math.comb(len(labels), 2)} unique pairwise alignments.</text>')
     pieces.append("</svg>")
     return "\n".join(pieces)
 

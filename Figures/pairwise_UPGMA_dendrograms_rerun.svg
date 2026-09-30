@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="760" viewBox="0 0 1700 760">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif}.title{font-size:24px;font-weight:700}.subtitle{font-size:17px;font-weight:700}.label{font-size:14px}.value{font-size:11px;fill:#7f0000}.branch{stroke:#222;stroke-width:2;fill:none}</style>
+<text x="850.0" y="35" text-anchor="middle" class="title">UPGMA clustering of pairwise structural-alignment metrics</text>
+<text x="415.0" y="73" text-anchor="middle" class="subtitle">RMSD distance</text>
+<text x="572" y="115" class="label">R2 RT</text>
+<text x="572" y="145" class="label">CaMV</text>
+<text x="572" y="175" class="label">AhPV1</text>
+<text x="572" y="205" class="label">TuYV</text>
+<text x="572" y="235" class="label">PLrV</text>
+<text x="572" y="265" class="label">RYMV</text>
+<text x="572" y="295" class="label">TRoV</text>
+<line x1="439.5807453416149" y1="260" x2="439.5807453416149" y2="290" class="branch"/>
+<line x1="439.5807453416149" y1="260" x2="560.0" y2="260" class="branch"/>
+<line x1="439.5807453416149" y1="290" x2="560.0" y2="290" class="branch"/>
+<text x="443.5807453416149" y="271.0" class="value">1.32</text>
+<line x1="362.95031055900625" y1="230" x2="362.95031055900625" y2="275.0" class="branch"/>
+<line x1="362.95031055900625" y1="230" x2="560.0" y2="230" class="branch"/>
+<line x1="362.95031055900625" y1="275.0" x2="439.5807453416149" y2="275.0" class="branch"/>
+<text x="366.95031055900625" y="248.5" class="value">2.16</text>
+<line x1="309.73473084886126" y1="200" x2="309.73473084886126" y2="252.5" class="branch"/>
+<line x1="309.73473084886126" y1="200" x2="560.0" y2="200" class="branch"/>
+<line x1="309.73473084886126" y1="252.5" x2="362.95031055900625" y2="252.5" class="branch"/>
+<text x="313.73473084886126" y="222.25" class="value">2.74</text>
+<text x="572" y="325" class="label">ALV1</text>
+<text x="572" y="355" class="label">TuMV</text>
+<line x1="300.91614906832297" y1="320" x2="300.91614906832297" y2="350" class="branch"/>
+<line x1="300.91614906832297" y1="320" x2="560.0" y2="320" class="branch"/>
+<line x1="300.91614906832297" y1="350" x2="560.0" y2="350" class="branch"/>
+<text x="304.91614906832297" y="331.0" class="value">2.84</text>
+<line x1="281.0743400621118" y1="226.25" x2="281.0743400621118" y2="335.0" class="branch"/>
+<line x1="281.0743400621118" y1="226.25" x2="309.73473084886126" y2="226.25" class="branch"/>
+<line x1="281.0743400621118" y1="335.0" x2="300.91614906832297" y2="335.0" class="branch"/>
+<text x="285.0743400621118" y="276.625" class="value">3.06</text>
+<line x1="255.15075051759837" y1="170" x2="255.15075051759837" y2="280.625" class="branch"/>
+<line x1="255.15075051759837" y1="170" x2="560.0" y2="170" class="branch"/>
+<line x1="255.15075051759837" y1="280.625" x2="281.0743400621118" y2="280.625" class="branch"/>
+<text x="259.15075051759834" y="221.3125" class="value">3.34</text>
+<text x="572" y="385" class="label">TCV</text>
+<text x="572" y="415" class="label">CMV</text>
+<text x="572" y="445" class="label">TRV</text>
+<text x="572" y="475" class="label">TMV</text>
+<text x="572" y="505" class="label">YoMV</text>
+<line x1="497.05357142857144" y1="470" x2="497.05357142857144" y2="500" class="branch"/>
+<line x1="497.05357142857144" y1="470" x2="560.0" y2="470" class="branch"/>
+<line x1="497.05357142857144" y1="500" x2="560.0" y2="500" class="branch"/>
+<text x="501.05357142857144" y="481.0" class="value">0.69</text>
+<line x1="409.47593167701865" y1="440" x2="409.47593167701865" y2="485.0" class="branch"/>
+<line x1="409.47593167701865" y1="440" x2="560.0" y2="440" class="branch"/>
+<line x1="409.47593167701865" y1="485.0" x2="497.05357142857144" y2="485.0" class="branch"/>
+<text x="413.47593167701865" y="458.5" class="value">1.65</text>
+<line x1="353.2194616977225" y1="410" x2="353.2194616977225" y2="462.5" class="branch"/>
+<line x1="353.2194616977225" y1="410" x2="560.0" y2="410" class="branch"/>
+<line x1="353.2194616977225" y1="462.5" x2="409.47593167701865" y2="462.5" class="branch"/>
+<text x="357.2194616977225" y="432.25" class="value">2.27</text>
+<line x1="230.44351708074538" y1="380" x2="230.44351708074538" y2="436.25" class="branch"/>
+<line x1="230.44351708074538" y1="380" x2="560.0" y2="380" class="branch"/>
+<line x1="230.44351708074538" y1="436.25" x2="353.2194616977225" y2="436.25" class="branch"/>
+<text x="234.44351708074538" y="404.125" class="value">3.61</text>
+<line x1="196.0054347826087" y1="225.3125" x2="196.0054347826087" y2="408.125" class="branch"/>
+<line x1="196.0054347826087" y1="225.3125" x2="255.15075051759837" y2="225.3125" class="branch"/>
+<line x1="196.0054347826087" y1="408.125" x2="230.44351708074538" y2="408.125" class="branch"/>
+<text x="200.0054347826087" y="312.71875" class="value">3.99</text>
+<text x="572" y="535" class="label">PlAMV</text>
+<text x="572" y="565" class="label">TYMV</text>
+<line x1="347.4417701863354" y1="530" x2="347.4417701863354" y2="560" class="branch"/>
+<line x1="347.4417701863354" y1="530" x2="560.0" y2="530" class="branch"/>
+<line x1="347.4417701863354" y1="560" x2="560.0" y2="560" class="branch"/>
+<text x="351.4417701863354" y="541.0" class="value">2.33</text>
+<line x1="152.9388263457557" y1="316.71875" x2="152.9388263457557" y2="545.0" class="branch"/>
+<line x1="152.9388263457557" y1="316.71875" x2="196.0054347826087" y2="316.71875" class="branch"/>
+<line x1="152.9388263457557" y1="545.0" x2="347.4417701863354" y2="545.0" class="branch"/>
+<text x="156.9388263457557" y="426.859375" class="value">4.46</text>
+<line x1="113.83623558118897" y1="140" x2="113.83623558118897" y2="430.859375" class="branch"/>
+<line x1="113.83623558118897" y1="140" x2="560.0" y2="140" class="branch"/>
+<line x1="113.83623558118897" y1="430.859375" x2="152.9388263457557" y2="430.859375" class="branch"/>
+<text x="117.83623558118897" y="281.4296875" class="value">4.89</text>
+<line x1="90.0" y1="110" x2="90.0" y2="285.4296875" class="branch"/>
+<line x1="90.0" y1="110" x2="560.0" y2="110" class="branch"/>
+<line x1="90.0" y1="285.4296875" x2="113.83623558118897" y2="285.4296875" class="branch"/>
+<text x="94.0" y="193.71484375" class="value">5.15</text>
+<line x1="90.0" y1="615" x2="560" y2="615" class="branch"/>
+<text x="90.0" y="635" text-anchor="start" class="label">5.15</text>
+<text x="560" y="635" text-anchor="end" class="label">0</text>
+<text x="325.0" y="661" text-anchor="middle" class="label">Average-linkage distance (Å)</text>
+<text x="1250.0" y="73" text-anchor="middle" class="subtitle">TM distance = 1 − TM-score</text>
+<text x="1407" y="115" class="label">CaMV</text>
+<text x="1407" y="145" class="label">PLrV</text>
+<text x="1407" y="175" class="label">TuYV</text>
+<line x1="1026.6803143909497" y1="140" x2="1026.6803143909497" y2="170" class="branch"/>
+<line x1="1026.6803143909497" y1="140" x2="1395.0" y2="140" class="branch"/>
+<line x1="1026.6803143909497" y1="170" x2="1395.0" y2="170" class="branch"/>
+<text x="1030.6803143909497" y="151.0" class="value">0.477</text>
+<text x="1407" y="205" class="label">R2 RT</text>
+<text x="1407" y="235" class="label">PlAMV</text>
+<text x="1407" y="265" class="label">TYMV</text>
+<line x1="1281.1090831360168" y1="230" x2="1281.1090831360168" y2="260" class="branch"/>
+<line x1="1281.1090831360168" y1="230" x2="1395.0" y2="230" class="branch"/>
+<line x1="1281.1090831360168" y1="260" x2="1395.0" y2="260" class="branch"/>
+<text x="1285.1090831360168" y="241.0" class="value">0.147</text>
+<text x="1407" y="295" class="label">TCV</text>
+<text x="1407" y="325" class="label">CMV</text>
+<text x="1407" y="355" class="label">TRV</text>
+<text x="1407" y="385" class="label">TMV</text>
+<text x="1407" y="415" class="label">YoMV</text>
+<line x1="1372.8122533543803" y1="380" x2="1372.8122533543803" y2="410" class="branch"/>
+<line x1="1372.8122533543803" y1="380" x2="1395.0" y2="380" class="branch"/>
+<line x1="1372.8122533543803" y1="410" x2="1395.0" y2="410" class="branch"/>
+<text x="1376.8122533543803" y="391.0" class="value">0.029</text>
+<line x1="1338.2554755327544" y1="350" x2="1338.2554755327544" y2="395.0" class="branch"/>
+<line x1="1338.2554755327544" y1="350" x2="1395.0" y2="350" class="branch"/>
+<line x1="1338.2554755327544" y1="395.0" x2="1372.8122533543803" y2="395.0" class="branch"/>
+<text x="1342.2554755327544" y="368.5" class="value">0.073</text>
+<line x1="1322.1588617030607" y1="320" x2="1322.1588617030607" y2="372.5" class="branch"/>
+<line x1="1322.1588617030607" y1="320" x2="1395.0" y2="320" class="branch"/>
+<line x1="1322.1588617030607" y1="372.5" x2="1338.2554755327544" y2="372.5" class="branch"/>
+<text x="1326.1588617030607" y="342.25" class="value">0.094</text>
+<line x1="1183.8377236253618" y1="290" x2="1183.8377236253618" y2="346.25" class="branch"/>
+<line x1="1183.8377236253618" y1="290" x2="1395.0" y2="290" class="branch"/>
+<line x1="1183.8377236253618" y1="346.25" x2="1322.1588617030607" y2="346.25" class="branch"/>
+<text x="1187.8377236253618" y="314.125" class="value">0.273</text>
+<line x1="1152.9734938174165" y1="245.0" x2="1152.9734938174165" y2="318.125" class="branch"/>
+<line x1="1152.9734938174165" y1="245.0" x2="1281.1090831360168" y2="245.0" class="branch"/>
+<line x1="1152.9734938174165" y1="318.125" x2="1183.8377236253618" y2="318.125" class="branch"/>
+<text x="1156.9734938174165" y="277.5625" class="value">0.313</text>
+<text x="1407" y="445" class="label">AhPV1</text>
+<text x="1407" y="475" class="label">ALV1</text>
+<text x="1407" y="505" class="label">TuMV</text>
+<text x="1407" y="535" class="label">RYMV</text>
+<text x="1407" y="565" class="label">TRoV</text>
+<line x1="1358.623224151539" y1="530" x2="1358.623224151539" y2="560" class="branch"/>
+<line x1="1358.623224151539" y1="530" x2="1395.0" y2="530" class="branch"/>
+<line x1="1358.623224151539" y1="560" x2="1395.0" y2="560" class="branch"/>
+<text x="1362.623224151539" y="541.0" class="value">0.047</text>
+<line x1="1198.9618685872138" y1="500" x2="1198.9618685872138" y2="545.0" class="branch"/>
+<line x1="1198.9618685872138" y1="500" x2="1395.0" y2="500" class="branch"/>
+<line x1="1198.9618685872138" y1="545.0" x2="1358.623224151539" y2="545.0" class="branch"/>
+<text x="1202.9618685872138" y="518.5" class="value">0.254</text>
+<line x1="1185.415570463913" y1="470" x2="1185.415570463913" y2="522.5" class="branch"/>
+<line x1="1185.415570463913" y1="470" x2="1395.0" y2="470" class="branch"/>
+<line x1="1185.415570463913" y1="522.5" x2="1198.9618685872138" y2="522.5" class="branch"/>
+<text x="1189.415570463913" y="492.25" class="value">0.271</text>
+<line x1="1166.8819882925545" y1="440" x2="1166.8819882925545" y2="496.25" class="branch"/>
+<line x1="1166.8819882925545" y1="440" x2="1395.0" y2="440" class="branch"/>
+<line x1="1166.8819882925545" y1="496.25" x2="1185.415570463913" y2="496.25" class="branch"/>
+<text x="1170.8819882925545" y="464.125" class="value">0.295</text>
+<line x1="1106.0463599804561" y1="281.5625" x2="1106.0463599804561" y2="468.125" class="branch"/>
+<line x1="1106.0463599804561" y1="281.5625" x2="1152.9734938174165" y2="281.5625" class="branch"/>
+<line x1="1106.0463599804561" y1="468.125" x2="1166.8819882925545" y2="468.125" class="branch"/>
+<text x="1110.0463599804561" y="370.84375" class="value">0.374</text>
+<line x1="1000.7926779137068" y1="200" x2="1000.7926779137068" y2="374.84375" class="branch"/>
+<line x1="1000.7926779137068" y1="200" x2="1395.0" y2="200" class="branch"/>
+<line x1="1000.7926779137068" y1="374.84375" x2="1106.0463599804561" y2="374.84375" class="branch"/>
+<text x="1004.7926779137068" y="283.421875" class="value">0.510</text>
+<line x1="977.0059308785136" y1="155.0" x2="977.0059308785136" y2="287.421875" class="branch"/>
+<line x1="977.0059308785136" y1="155.0" x2="1026.6803143909497" y2="155.0" class="branch"/>
+<line x1="977.0059308785136" y1="287.421875" x2="1000.7926779137068" y2="287.421875" class="branch"/>
+<text x="981.0059308785136" y="217.2109375" class="value">0.541</text>
+<line x1="925.0" y1="110" x2="925.0" y2="221.2109375" class="branch"/>
+<line x1="925.0" y1="110" x2="1395.0" y2="110" class="branch"/>
+<line x1="925.0" y1="221.2109375" x2="977.0059308785136" y2="221.2109375" class="branch"/>
+<text x="929.0" y="161.60546875" class="value">0.608</text>
+<line x1="925.0" y1="615" x2="1395" y2="615" class="branch"/>
+<text x="925.0" y="635" text-anchor="start" class="label">0.608</text>
+<text x="1395" y="635" text-anchor="end" class="label">0</text>
+<text x="1160.0" y="661" text-anchor="middle" class="label">Average-linkage distance (unitless)</text>
+<text x="850" y="742" text-anchor="middle" class="label">Numbers at internal nodes are the UPGMA average-linkage distances.</text>
+</svg>

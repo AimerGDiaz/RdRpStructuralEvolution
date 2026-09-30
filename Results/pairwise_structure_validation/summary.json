@@ -1,17 +1,17 @@
 {
-  "number_of_structures": 17,
-  "number_of_unique_pairs": 136,
+  "number_of_structures": 16,
+  "number_of_unique_pairs": 120,
   "rmsd_angstrom": {
     "minimum": 0.69,
-    "median": 4.16,
-    "maximum": 6.6
+    "median": 4.125,
+    "maximum": 5.55
   },
   "tm_score_average_length_normalized": {
-    "minimum": 0.22899,
-    "median": 0.5487599999999999,
+    "minimum": 0.26601,
+    "median": 0.59353,
     "maximum": 0.97129,
     "pairs_at_least_0_5": 75,
-    "fraction_at_least_0_5": 0.5514705882352942
+    "fraction_at_least_0_5": 0.625
   },
   "top_ten_pairs_by_tm_score": [
     {

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-19T08:55:50.577958+00:00",
+  "generated_utc": "2026-09-30T17:31:34.894888+00:00",
   "usalign_version": "20260826",
   "usalign_executable_sha256": "7d2e41022b6124d1b737642bb68775656f6dfa0c4a20ba68d5d1fe3b7a171dd3",
   "command_template": "USalign structure_1.pdb structure_2.pdb -mol prot -a T -outfmt -1",
