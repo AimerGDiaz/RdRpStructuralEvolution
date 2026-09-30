@@ -408,7 +408,7 @@ distance](Results/pairwise_structure_validation/upgma_tm_distance.newick).
 The complete analysis, including all alignments, matrices, UPGMA trees,
 and figures, can be regenerated with the repository script after
 downloading the official [US-align
-executable](https://seq2fun.dcmb.med.umich.edu/US-align/):
+executable](https://zhanggroup.org/US-align/):
 
 ``` bash
 python Code/pairwise_structure_validation.py --usalign /path/to/USalign

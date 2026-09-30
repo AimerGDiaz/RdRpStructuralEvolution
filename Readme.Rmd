@@ -407,7 +407,7 @@ UPGMA average-linkage clustering [@sokal1958statistical] was performed independe
 
 The exact linkage histories are provided in the [RMSD merge table](Results/pairwise_structure_validation/upgma_rmsd_merges.csv) and [TM-distance merge table](Results/pairwise_structure_validation/upgma_tm_distance_merges.csv). Machine-readable trees are provided in Newick format for [RMSD](Results/pairwise_structure_validation/upgma_rmsd.newick) and [TM distance](Results/pairwise_structure_validation/upgma_tm_distance.newick).
 
-The complete analysis, including all alignments, matrices, UPGMA trees, and figures, can be regenerated with the repository script after downloading the official [US-align executable](https://seq2fun.dcmb.med.umich.edu/US-align/):
+The complete analysis, including all alignments, matrices, UPGMA trees, and figures, can be regenerated with the repository script after downloading the official [US-align executable](https://zhanggroup.org/US-align/):
 
 ```bash
 python Code/pairwise_structure_validation.py --usalign /path/to/USalign
